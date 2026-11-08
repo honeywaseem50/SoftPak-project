@@ -1,0 +1,6 @@
+{
+  "name": "SoftBazaar",
+  "description": "Authentic software license marketplace & digital key vault in Pakistan with instant WhatsApp dispatch.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

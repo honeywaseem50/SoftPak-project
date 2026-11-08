@@ -1,0 +1,2336 @@
+<!-- Storefront - SoftBazaar -->
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary-fixed": "#48fdcd", "tertiary-fixed": "#ffddb8", "surface-bright": "#1c3e3f", "on-tertiary": "#472a00", "inverse-primary": "#00696f", "on-primary-fixed-variant": "#004f53", "surface-dim": "#001717", "on-tertiary-fixed-variant": "#653e00", "secondary-fixed-dim": "#00e0b1", "surface-container": "#002425", "secondary": "#48fdcd", "inverse-surface": "#c5e9ea", "tertiary-container": "#ffd3a1", "primary": "#e0fdff", "inverse-on-surface": "#123536", "surface-container-highest": "#173a3b", "on-primary-container": "#006a70", "on-secondary-fixed": "#002117", "on-tertiary-container": "#875400", "surface-container-low": "#002021", "surface-container-high": "#0a2f30", "on-background": "#c5e9ea", "on-error": "#690005", "primary-container": "#00f2fe", "primary-fixed": "#6ff6ff", "tertiary": "#fff5ee", "surface-tint": "#00dce6", "on-primary": "#00373a", "on-secondary-container": "#005e49", "on-secondary": "#00382a", "secondary-container": "#00e0b1", "error-container": "#93000a", "background": "#001717", "surface-container-lowest": "#001112", "on-tertiary-fixed": "#2a1700", "surface": "#001717", "on-secondary-fixed-variant": "#00513e", "on-surface-variant": "#b9cacb", "on-error-container": "#ffdad6", "outline-variant": "#3a494b", "tertiary-fixed-dim": "#ffb95f", "surface-variant": "#173a3b", "outline": "#849495", "on-primary-fixed": "#002022", "error": "#ffb4ab", "primary-fixed-dim": "#00dce6", "on-surface": "#c5e9ea" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter-mobile": "0.75rem", "space-2xl": "3rem", "margin-desktop": "2.5rem", "space-xs": "0.25rem", "margin-tablet": "1.5rem", "space-md": "1rem", "gutter-desktop": "1.5rem", "space-xl": "2rem", "space-lg": "1.5rem", "space-2xs": "0.125rem", "space-sm": "0.5rem", "gutter": "1rem", "margin": "1rem" }, fontFamily: { "label-md": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-currency": ["Plus Jakarta Sans"], "title-lg": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "badge-sm": ["Plus Jakarta Sans"] }, fontSize: { "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "display-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "800" }], "headline-md": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "700" }], "label-currency": ["18px", { lineHeight: "24px", letterSpacing: "0.02em", fontWeight: "800" }], "title-lg": ["18px", { lineHeight: "24px", fontWeight: "600" }], "display-lg-mobile": ["30px", { lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "800" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "headline-lg-mobile": ["22px", { lineHeight: "30px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "title-md": ["16px", { lineHeight: "22px", fontWeight: "600" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "badge-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "700" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="SoftBazaar Brand Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaTLpew6t2tsKv7UoWeQyw0HU9Hc66HXsVz8gUFDHgvgOBsKyhupIJBKUUltzDaUzfSpIK-yOVd0UNlTVLF0JH460vMe4ET3wUyOOOGUUNEaPEKr5yV0EPTDKtfn3EVFEwYLNHo8_k5ttPUAnugsxdqFjMdOtuomD5KqXJ3PRKHzPZ29dde-3fJv_81enYW1mlSRqq4BdU4KatXQnedHnG4Z-p4f-dcr8E98P8XA"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md font-bold tracking-tight text-primary truncate">SoftBazaar</span><span class="px-space-xs py-space-2xs bg-secondary/10 rounded-full font-badge-sm text-badge-sm text-secondary uppercase">PK</span></div><span class="font-label-md text-label-md text-on-surface-variant truncate">Store</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><a aria-label="Search" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" data-path="categories" href="#"><span class="material-symbols-outlined text-[20px]">search</span></a><a aria-label="Instant WhatsApp Support" class="h-11 px-space-sm flex items-center gap-space-xs rounded-full bg-surface-container-high hover:bg-surface-container-highest text-secondary transition-colors" href="https://wa.me/" target="_blank"><span class="material-symbols-outlined text-[18px]">chat</span><span class="hidden xs:inline font-badge-sm text-badge-sm font-bold">Instant</span><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span></a><button aria-label="User Profile" class="w-11 h-11 flex items-center justify-center rounded-full p-space-2xs bg-surface-container-highest/60 hover:bg-surface-container-highest transition-colors"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPUgD5gwm-ZZ5GkcurLybhq0SdKXVn-GEOk_9SmvA_bbjuUqM5ZqWFlOE4j68d16FsK7RIMNKfVTltet06Tmnp_iBLg7s44YRlVXJ_P0ma-hYk2qvKtTRSdQ8uXMk5EJC2IGZ83v9WrDPeqepuBBInMRBuhxMibCito6FzSN3P4Dlo7woXeqzGGNBz1a2JIUAy78RtTVqYHSaBWkiuf4OchKkHcvfQe75AiF4FJg"/></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="px-margin pt-space-md pb-space-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed animate-ping"></span>
+          Storefront Live in PK
+        </span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold tracking-tight">
+          Find Genuine Software
+        </h1>
+</div>
+<div class="flex items-center gap-space-2xs px-space-sm py-space-xs rounded-full bg-surface-container-high">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span class="font-badge-sm text-badge-sm text-secondary font-bold">100% Genuine</span>
+</div>
+</div>
+<!-- Live Search Input -->
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-space-md flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">search</span>
+</div>
+<input class="w-full pl-11 pr-space-md py-space-sm rounded-xl bg-surface-container-high text-primary placeholder-on-surface-variant font-body-md text-body-md focus:outline-none focus:bg-surface-container-highest transition-all shadow-sm" id="softwareSearchInput" placeholder="Search Windows 11, VPN, IDM, Antivirus..." type="search"/>
+</div>
+<!-- Quick Search Shortcut Chips -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-space-2xs text-nowrap">
+<span class="font-badge-sm text-badge-sm text-on-surface-variant uppercase tracking-wider">Popular:</span>
+<button class="quick-chip px-space-sm py-space-2xs rounded-full bg-surface-container text-on-surface-variant font-badge-sm text-badge-sm hover:bg-surface-container-highest hover:text-primary transition-colors">Windows 11 Pro</button>
+<button class="quick-chip px-space-sm py-space-2xs rounded-full bg-surface-container text-on-surface-variant font-badge-sm text-badge-sm hover:bg-surface-container-highest hover:text-primary transition-colors">IDM Lifetime</button>
+<button class="quick-chip px-space-sm py-space-2xs rounded-full bg-surface-container text-on-surface-variant font-badge-sm text-badge-sm hover:bg-surface-container-highest hover:text-primary transition-colors">NordVPN</button>
+<button class="quick-chip px-space-sm py-space-2xs rounded-full bg-surface-container text-on-surface-variant font-badge-sm text-badge-sm hover:bg-surface-container-highest hover:text-primary transition-colors">Office 2024</button>
+</div>
+</div>
+<!-- High-Trust Delivery Guarantee Banner -->
+<div class="px-margin py-space-xs">
+<div class="p-space-md rounded-xl bg-gradient-to-r from-surface-container-high via-surface-container to-surface-container-high relative overflow-hidden shadow-md">
+<div class="absolute -right-4 -bottom-4 w-24 h-24 rounded-full bg-secondary/5 blur-xl pointer-events-none"></div>
+<div class="flex items-start gap-space-sm relative z-10">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center flex-shrink-0 text-secondary-fixed">
+<span class="material-symbols-outlined text-[24px]">electric_bolt</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-primary font-bold">Instant License Delivery</span>
+<span class="px-space-xs py-space-2xs rounded bg-secondary-fixed-dim/20 text-secondary-fixed font-badge-sm text-badge-sm uppercase tracking-wider">60 Secs</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">
+            Official setup keys &amp; activation steps straight to your WhatsApp &amp; Email within 1 minute of payment confirmation.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Category Pills -->
+<div class="pt-space-md pb-space-xs">
+<div class="px-margin flex gap-space-xs overflow-x-auto no-scrollbar">
+<button class="cat-pill px-space-md py-space-xs rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md shadow-sm whitespace-nowrap transition-transform active:scale-95" data-category="all">
+        All Software
+      </button>
+<button class="cat-pill px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap transition-colors hover:text-primary active:scale-95" data-category="windows">
+        Windows &amp; Office
+      </button>
+<button class="cat-pill px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap transition-colors hover:text-primary active:scale-95" data-category="vpn">
+        VPNs &amp; Privacy
+      </button>
+<button class="cat-pill px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap transition-colors hover:text-primary active:scale-95" data-category="security">
+        Antivirus &amp; Security
+      </button>
+<button class="cat-pill px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap transition-colors hover:text-primary active:scale-95" data-category="dev">
+        Developer Tools
+      </button>
+<button class="cat-pill px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap transition-colors hover:text-primary active:scale-95" data-category="creative">
+        Graphic &amp; Video
+      </button>
+</div>
+</div>
+<!-- Featured Best-Sellers Grid -->
+<div class="px-margin pt-space-md pb-space-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<h2 class="font-title-lg text-title-lg text-primary font-bold">Best Sellers in Pakistan</h2>
+</div>
+<span class="font-body-sm text-body-sm text-secondary-fixed flex items-center gap-space-2xs cursor-pointer hover:underline">
+        View All <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</span>
+</div>
+<!-- Product Stream -->
+<div class="flex flex-col gap-space-md" id="productListingGrid">
+<!-- Item 1: Windows 11 Pro -->
+<div class="product-card p-space-md rounded-2xl bg-surface-container-high flex flex-col gap-space-sm transition-all hover:bg-surface-container-highest shadow-md" data-category-item="windows">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center flex-shrink-0 text-primary-container shadow-inner">
+<span class="material-symbols-outlined text-[28px]">window</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-space-xs py-space-2xs rounded bg-tertiary-container text-on-tertiary-container font-badge-sm text-badge-sm uppercase font-bold">Official Retail</span>
+<span class="px-space-xs py-space-2xs rounded bg-secondary/10 text-secondary font-badge-sm text-badge-sm flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[12px]">bolt</span> Instant Delivery
+                </span>
+</div>
+<h3 class="font-title-md text-title-md text-primary font-bold truncate mt-space-2xs">Windows 11 Pro Lifetime Retail Key</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Global Activation • Direct Microsoft Verification • 1 PC</p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t-0">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-label-currency text-label-currency text-secondary-fixed font-extrabold">₨ 1,850</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₨ 3,500</span>
+<span class="px-space-xs py-space-2xs rounded-full bg-error-container text-on-error-container font-badge-sm text-badge-sm font-bold">-47%</span>
+</div>
+<div class="flex items-center gap-space-2xs text-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold">4.9</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(1.2k)</span>
+</div>
+</div>
+<div class="flex items-center justify-between gap-space-sm pt-space-2xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">48 Keys in Stock</span>
+</div>
+<button class="buy-now-trigger px-space-md py-space-xs rounded-xl bg-gradient-to-r from-primary-container to-secondary-container text-on-primary font-label-md text-label-md font-bold flex items-center gap-space-xs active:scale-95 transition-transform shadow-md">
+<span>Buy Key</span>
+<span class="material-symbols-outlined text-[16px]">shopping_cart_checkout</span>
+</button>
+</div>
+</div>
+<!-- Item 2: NordVPN -->
+<div class="product-card p-space-md rounded-2xl bg-surface-container-high flex flex-col gap-space-sm transition-all hover:bg-surface-container-highest shadow-md" data-category-item="vpn">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center flex-shrink-0 text-primary shadow-inner">
+<span class="material-symbols-outlined text-[28px]">vpn_lock</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-space-xs py-space-2xs rounded bg-surface-bright text-secondary-fixed font-badge-sm text-badge-sm uppercase font-bold">2-Year Complete</span>
+<span class="px-space-xs py-space-2xs rounded bg-secondary-fixed/15 text-secondary-fixed font-badge-sm text-badge-sm flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[12px]">speed</span> Fast in Pakistan
+                </span>
+</div>
+<h3 class="font-title-md text-title-md text-primary font-bold truncate mt-space-2xs">NordVPN 2-Year Complete Ultra</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">6 Devices Simultaneous • Threat Protection • Zero Logs</p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t-0">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-label-currency text-label-currency text-secondary-fixed font-extrabold">₨ 3,200</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₨ 6,500</span>
+<span class="px-space-xs py-space-2xs rounded-full bg-error-container text-on-error-container font-badge-sm text-badge-sm font-bold">-51%</span>
+</div>
+<div class="flex items-center gap-space-2xs text-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold">4.8</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(860)</span>
+</div>
+</div>
+<div class="flex items-center justify-between gap-space-sm pt-space-2xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Instant Account Handover</span>
+</div>
+<button class="buy-now-trigger px-space-md py-space-xs rounded-xl bg-gradient-to-r from-primary-container to-secondary-container text-on-primary font-label-md text-label-md font-bold flex items-center gap-space-xs active:scale-95 transition-transform shadow-md">
+<span>Buy Key</span>
+<span class="material-symbols-outlined text-[16px]">shopping_cart_checkout</span>
+</button>
+</div>
+</div>
+<!-- Item 3: IDM Lifetime -->
+<div class="product-card p-space-md rounded-2xl bg-surface-container-high flex flex-col gap-space-sm transition-all hover:bg-surface-container-highest shadow-md" data-category-item="windows">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center flex-shrink-0 text-secondary-fixed shadow-inner">
+<span class="material-symbols-outlined text-[28px]">download_for_offline</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-space-xs py-space-2xs rounded bg-tertiary-container text-on-tertiary-container font-badge-sm text-badge-sm uppercase font-bold">Lifetime Validity</span>
+<span class="px-space-xs py-space-2xs rounded bg-surface-bright text-primary font-badge-sm text-badge-sm flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[12px]">workspace_premium</span> Most Popular in PK
+                </span>
+</div>
+<h3 class="font-title-md text-title-md text-primary font-bold truncate mt-space-2xs">Internet Download Manager (IDM)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Official Tonec Key • Free Updates 3 Yrs • 1 PC</p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-label-currency text-label-currency text-secondary-fixed font-extrabold">₨ 2,400</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₨ 4,200</span>
+</div>
+<div class="flex items-center gap-space-2xs text-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold">5.0</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(2.4k)</span>
+</div>
+</div>
+<div class="flex items-center justify-between gap-space-sm pt-space-2xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Instant WhatsApp Code</span>
+</div>
+<button class="buy-now-trigger px-space-md py-space-xs rounded-xl bg-gradient-to-r from-primary-container to-secondary-container text-on-primary font-label-md text-label-md font-bold flex items-center gap-space-xs active:scale-95 transition-transform shadow-md">
+<span>Buy Key</span>
+<span class="material-symbols-outlined text-[16px]">shopping_cart_checkout</span>
+</button>
+</div>
+</div>
+<!-- Item 4: Kaspersky Total Security -->
+<div class="product-card p-space-md rounded-2xl bg-surface-container-high flex flex-col gap-space-sm transition-all hover:bg-surface-container-highest shadow-md" data-category-item="security">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center flex-shrink-0 text-secondary shadow-inner">
+<span class="material-symbols-outlined text-[28px]">shield_lock</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-space-xs py-space-2xs rounded bg-surface-bright text-secondary-fixed font-badge-sm text-badge-sm uppercase font-bold">1 PC / 1 Year</span>
+<span class="px-space-xs py-space-2xs rounded bg-secondary/10 text-secondary font-badge-sm text-badge-sm">2025 Edition</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary font-bold truncate mt-space-2xs">Kaspersky Total Security 2025</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Ransomware Shield • Safe Money Banking • Auto-Renewal OFF</p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-label-currency text-label-currency text-secondary-fixed font-extrabold">₨ 1,600</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₨ 2,800</span>
+</div>
+<div class="flex items-center gap-space-2xs text-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold">4.7</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(430)</span>
+</div>
+</div>
+<div class="flex items-center justify-between gap-space-sm pt-space-2xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Automated Email Dispatch</span>
+</div>
+<button class="buy-now-trigger px-space-md py-space-xs rounded-xl bg-gradient-to-r from-primary-container to-secondary-container text-on-primary font-label-md text-label-md font-bold flex items-center gap-space-xs active:scale-95 transition-transform shadow-md">
+<span>Buy Key</span>
+<span class="material-symbols-outlined text-[16px]">shopping_cart_checkout</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Localized Trust Banner: Supported Payment Methods -->
+<div class="px-margin pt-space-md pb-space-xs">
+<div class="p-space-md rounded-2xl bg-surface-container flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-primary font-bold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-secondary">payments</span>
+          Trusted Payment Methods We Accept
+        </span>
+<span class="font-badge-sm text-badge-sm px-space-xs py-space-2xs rounded bg-surface-bright text-secondary-fixed font-bold">0% Transaction Fee</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Instant automated verification via Pakistan's primary digital payment networks:
+      </p>
+<!-- Payment Gateways Chips -->
+<div class="grid grid-cols-2 gap-space-xs pt-space-2xs">
+<div class="p-space-sm rounded-xl bg-surface-container-high flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary-fixed font-bold font-badge-sm text-badge-sm">
+            JC
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-primary font-bold leading-tight">JazzCash</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-none">Instant OTP</span>
+</div>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-high flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary-fixed font-bold font-badge-sm text-badge-sm">
+            EP
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-primary font-bold leading-tight">Easypaisa</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-none">Auto Verified</span>
+</div>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-high flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-container font-bold font-badge-sm text-badge-sm">
+            RT
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-primary font-bold leading-tight">Raast Direct</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-none">State Bank 0%</span>
+</div>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-high flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary font-bold font-badge-sm text-badge-sm">
+            SP
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-primary font-bold leading-tight">SadaPay / Naya</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-none">Debit Card</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Real-time Human Customer Support Card (Lahore & Karachi) -->
+<div class="px-margin pt-space-sm pb-space-lg">
+<div class="p-space-md rounded-2xl bg-surface-container-high flex flex-col gap-space-sm relative overflow-hidden shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<div class="w-10 h-10 rounded-full bg-surface-bright flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">support_agent</span>
+</div>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-secondary-fixed ring-2 ring-surface-container-high"></span>
+</div>
+<div class="flex flex-col">
+<h4 class="font-title-md text-title-md text-primary font-bold">Need Help Activating?</h4>
+<span class="font-body-sm text-body-sm text-secondary-fixed">Lahore &amp; Karachi Agents Online</span>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Having trouble with Microsoft or Antivirus installation? We guide you step-by-step through remote screen or audio call.
+      </p>
+<a class="w-full py-space-sm px-space-md rounded-xl bg-surface-container-highest hover:bg-surface-bright text-secondary-fixed font-label-md text-label-md font-bold flex items-center justify-center gap-space-sm transition-all shadow-sm" href="https://wa.me/" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Chat with Local Technical Support on WhatsApp</span>
+</a>
+</div>
+</div>
+<!-- Interactive Quick Buy Drawer / Toast Simulation Script -->
+<div class="fixed bottom-24 left-1/2 -translate-x-1/2 z-50 px-space-md py-space-sm rounded-full bg-surface-bright text-primary font-label-md text-label-md shadow-2xl flex items-center gap-space-xs pointer-events-none opacity-0 translate-y-4 transition-all duration-300" id="quickToast">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span id="toastMessage">License added to Express Checkout</span>
+</div>
+</div>
+<script>
+  (function() {
+    // Dynamic Category Filtering
+    const catButtons = document.querySelectorAll('.cat-pill');
+    const productCards = document.querySelectorAll('#productListingGrid [data-category-item]');
+
+    catButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const cat = btn.getAttribute('data-category');
+        
+        // Style switch
+        catButtons.forEach(b => {
+          b.className = 'cat-pill px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap transition-colors hover:text-primary active:scale-95';
+        });
+        btn.className = 'cat-pill px-space-md py-space-xs rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md shadow-sm whitespace-nowrap transition-transform active:scale-95';
+
+        // Filter products
+        productCards.forEach(card => {
+          if (cat === 'all' || card.getAttribute('data-category-item') === cat) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Search filter
+    const searchInput = document.getElementById('softwareSearchInput');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        productCards.forEach(card => {
+          const title = card.querySelector('h3').textContent.toLowerCase();
+          const desc = card.querySelector('p').textContent.toLowerCase();
+          if (title.includes(query) || desc.includes(query)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    }
+
+    // Quick Chip search buttons
+    const quickChips = document.querySelectorAll('.quick-chip');
+    quickChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        if (searchInput) {
+          searchInput.value = chip.textContent.trim();
+          searchInput.dispatchEvent(new Event('input'));
+        }
+      });
+    });
+
+    // Buy Button Toast Feedback
+    const buyButtons = document.querySelectorAll('.buy-now-trigger');
+    const toast = document.getElementById('quickToast');
+    const toastMsg = document.getElementById('toastMessage');
+
+    buyButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const card = btn.closest('.product-card');
+        const title = card ? card.querySelector('h3').textContent : 'License';
+        
+        if (toast && toastMsg) {
+          toastMsg.textContent = 'Selected: ' + title.substring(0, 22) + '...';
+          toast.classList.remove('opacity-0', 'translate-y-4');
+          toast.classList.add('opacity-100', 'translate-y-0');
+
+          setTimeout(() => {
+            toast.classList.remove('opacity-100', 'translate-y-0');
+            toast.classList.add('opacity-0', 'translate-y-4');
+          }, 2400);
+        }
+      });
+    });
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_-4px_20px_rgba(0,0,0,0.4)]" data-active-classes="text-secondary-fixed-dim"><div class="flex justify-around items-center h-20 px-space-sm"><a aria-current="page" class="flex flex-col items-center justify-center gap-space-2xs min-w-[56px] min-h-[44px] transition-colors text-secondary-fixed-dim" data-path="store" href="#"><span class="material-symbols-outlined text-[24px]">storefront</span><span class="font-label-md text-label-md">Store</span></a><a class="flex flex-col items-center justify-center gap-space-2xs min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="categories" href="#"><span class="material-symbols-outlined text-[24px]">grid_view</span><span class="font-label-md text-label-md">Categories</span></a><a class="flex flex-col items-center justify-center gap-space-2xs min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="my-keys" href="#"><span class="material-symbols-outlined text-[24px]">key</span><span class="font-label-md text-label-md">My Keys</span></a><a class="flex flex-col items-center justify-center gap-space-2xs min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="admin-inventory" href="#"><span class="material-symbols-outlined text-[24px]">admin_panel_settings</span><span class="font-label-md text-label-md">Admin</span></a></div></nav></body></html>
+
+<!-- Product Details - Windows 11 Pro -->
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary-fixed": "#48fdcd", "tertiary-fixed": "#ffddb8", "surface-bright": "#1c3e3f", "on-tertiary": "#472a00", "inverse-primary": "#00696f", "on-primary-fixed-variant": "#004f53", "surface-dim": "#001717", "on-tertiary-fixed-variant": "#653e00", "secondary-fixed-dim": "#00e0b1", "surface-container": "#002425", "secondary": "#48fdcd", "inverse-surface": "#c5e9ea", "tertiary-container": "#ffd3a1", "primary": "#e0fdff", "inverse-on-surface": "#123536", "surface-container-highest": "#173a3b", "on-primary-container": "#006a70", "on-secondary-fixed": "#002117", "on-tertiary-container": "#875400", "surface-container-low": "#002021", "surface-container-high": "#0a2f30", "on-background": "#c5e9ea", "on-error": "#690005", "primary-container": "#00f2fe", "primary-fixed": "#6ff6ff", "tertiary": "#fff5ee", "surface-tint": "#00dce6", "on-primary": "#00373a", "on-secondary-container": "#005e49", "on-secondary": "#00382a", "secondary-container": "#00e0b1", "error-container": "#93000a", "background": "#001717", "surface-container-lowest": "#001112", "on-tertiary-fixed": "#2a1700", "surface": "#001717", "on-secondary-fixed-variant": "#00513e", "on-surface-variant": "#b9cacb", "on-error-container": "#ffdad6", "outline-variant": "#3a494b", "tertiary-fixed-dim": "#ffb95f", "surface-variant": "#173a3b", "outline": "#849495", "on-primary-fixed": "#002022", "error": "#ffb4ab", "primary-fixed-dim": "#00dce6", "on-surface": "#c5e9ea" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter-mobile": "0.75rem", "space-2xl": "3rem", "margin-desktop": "2.5rem", "space-xs": "0.25rem", "margin-tablet": "1.5rem", "space-md": "1rem", "gutter-desktop": "1.5rem", "space-xl": "2rem", "space-lg": "1.5rem", "space-2xs": "0.125rem", "space-sm": "0.5rem", "gutter": "1rem", "margin": "1rem" }, fontFamily: { "label-md": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-currency": ["Plus Jakarta Sans"], "title-lg": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "badge-sm": ["Plus Jakarta Sans"] }, fontSize: { "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "display-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "800" }], "headline-md": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "700" }], "label-currency": ["18px", { lineHeight: "24px", letterSpacing: "0.02em", fontWeight: "800" }], "title-lg": ["18px", { lineHeight: "24px", fontWeight: "600" }], "display-lg-mobile": ["30px", { lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "800" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "headline-lg-mobile": ["22px", { lineHeight: "30px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "title-md": ["16px", { lineHeight: "22px", fontWeight: "600" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "badge-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "700" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors flex-shrink-0" onclick="history.back()"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><img alt="SoftBazaar Brand Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaTLpew6t2tsKv7UoWeQyw0HU9Hc66HXsVz8gUFDHgvgOBsKyhupIJBKUUltzDaUzfSpIK-yOVd0UNlTVLF0JH460vMe4ET3wUyOOOGUUNEaPEKr5yV0EPTDKtfn3EVFEwYLNHo8_k5ttPUAnugsxdqFjMdOtuomD5KqXJ3PRKHzPZ29dde-3fJv_81enYW1mlSRqq4BdU4KatXQnedHnG4Z-p4f-dcr8E98P8XA"/><div class="flex flex-col min-w-0"><span class="font-headline-md text-headline-md font-bold text-primary truncate">License Details</span><span class="font-label-md text-label-md text-on-surface-variant truncate">SoftBazaar Pakistan</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><a aria-label="WhatsApp Support" class="h-11 px-space-sm flex items-center gap-space-xs rounded-full bg-surface-container-high hover:bg-surface-container-highest text-secondary transition-colors" href="https://wa.me/" target="_blank"><span class="material-symbols-outlined text-[18px]">chat</span></a><button aria-label="User Profile" class="w-11 h-11 flex items-center justify-center rounded-full p-space-2xs bg-surface-container-highest/60 hover:bg-surface-container-highest transition-colors"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPUgD5gwm-ZZ5GkcurLybhq0SdKXVn-GEOk_9SmvA_bbjuUqM5ZqWFlOE4j68d16FsK7RIMNKfVTltet06Tmnp_iBLg7s44YRlVXJ_P0ma-hYk2qvKtTRSdQ8uXMk5EJC2IGZ83v9WrDPeqepuBBInMRBuhxMibCito6FzSN3P4Dlo7woXeqzGGNBz1a2JIUAy78RtTVqYHSaBWkiuf4OchKkHcvfQe75AiF4FJg"/></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full px-margin pb-32 space-y-space-md">
+<!-- Breadcrumb -->
+<div class="flex items-center gap-space-xs text-on-surface-variant pt-space-xs">
+<span class="material-symbols-outlined text-[16px]">storefront</span>
+<span class="font-label-md text-label-md">Store</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="font-label-md text-label-md text-secondary truncate">Windows &amp; Office Licenses</span>
+</div>
+<!-- Hero Product Overview Card -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-high p-space-md shadow-md">
+<div class="absolute -top-12 -right-12 w-40 h-40 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex items-start gap-space-md relative z-10">
+<!-- SoftBazaar Verified Emblem -->
+<div class="relative flex-shrink-0 w-16 h-16 rounded-xl bg-surface-container-highest flex items-center justify-center shadow-sm">
+<svg class="w-10 h-10 text-secondary" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 48 48">
+<path d="M24 4L8 10V22C8 32 15 40 24 44C33 40 40 32 40 22V10L24 4Z"></path>
+<rect height="12" rx="2" width="12" x="18" y="18"></rect>
+<path d="M22 24H26"></path>
+<circle cx="24" cy="23" r="1.5"></circle>
+<path d="M12 18H18M30 18H36M12 26H18M30 26H36"></path>
+</svg>
+<span class="absolute -bottom-1 -right-1 flex h-4 w-4">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-fixed opacity-75"></span>
+<span class="relative inline-flex rounded-full h-4 w-4 bg-secondary items-center justify-center">
+<span class="material-symbols-outlined text-[10px] text-on-secondary" style="font-variation-settings: 'FILL' 1;">check</span>
+</span>
+</span>
+</div>
+<!-- Title & Badges -->
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs mb-space-2xs">
+<span class="px-space-xs py-space-2xs rounded bg-surface-bright text-tertiary-fixed font-badge-sm text-badge-sm uppercase tracking-wider flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[13px] text-tertiary-fixed" style="font-variation-settings: 'FILL' 1;">verified</span>
+            Microsoft Retail
+          </span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">
+          Windows 11 Professional
+        </h1>
+<p class="font-label-md text-label-md text-on-surface-variant mt-space-2xs">
+          Retail 32/64-Bit Global License
+        </p>
+</div>
+</div>
+<!-- Rating & Realtime Proof -->
+<div class="mt-space-md pt-space-sm bg-surface-container/60 rounded-lg p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="flex text-tertiary-fixed">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-title-md text-title-md text-primary">4.9</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(840+ verified)</span>
+</div>
+<span class="font-label-md text-label-md text-secondary flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[15px]">location_on</span>
+        PK Verified
+      </span>
+</div>
+</div>
+<!-- Pricing & Stock Callout -->
+<div class="rounded-xl bg-surface-container p-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex items-baseline justify-between">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-label-currency text-label-currency text-secondary-fixed">₨ 1,850</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₨ 3,500</span>
+</div>
+<span class="px-space-xs py-space-2xs rounded-full bg-secondary/15 text-secondary font-label-md text-label-md">
+        Save 47% Today
+      </span>
+</div>
+<!-- Stock ticker -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+</span>
+<span class="font-label-md text-label-md text-on-surface">42 keys available</span>
+</div>
+<div class="flex items-center gap-space-2xs text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+        Instant Dispatch
+      </div>
+</div>
+<!-- Local payment badge icons -->
+<div class="flex items-center justify-between pt-space-sm mt-space-xs bg-surface-container-low rounded-lg p-space-xs text-on-surface-variant">
+<span class="font-body-sm text-body-sm pl-space-xs">Supported Instant Checkout:</span>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-space-2xs rounded bg-surface-container-high text-primary font-badge-sm text-badge-sm">JazzCash</span>
+<span class="px-space-xs py-space-2xs rounded bg-surface-container-high text-primary font-badge-sm text-badge-sm">Easypaisa</span>
+<span class="px-space-xs py-space-2xs rounded bg-surface-container-high text-secondary font-badge-sm text-badge-sm">Raast</span>
+<span class="px-space-xs py-space-2xs rounded bg-surface-container-high text-primary font-badge-sm text-badge-sm">SadaPay</span>
+</div>
+</div>
+</div>
+<!-- Compatibility Tags -->
+<div class="flex flex-wrap gap-space-xs">
+<div class="flex items-center gap-space-2xs px-space-sm py-space-xs rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[15px] text-secondary">laptop_windows</span>
+      Windows 11
+    </div>
+<div class="flex items-center gap-space-2xs px-space-sm py-space-xs rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[15px] text-secondary">memory</span>
+      64-Bit / 32-Bit
+    </div>
+<div class="flex items-center gap-space-2xs px-space-sm py-space-xs rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[15px] text-secondary">public</span>
+      Global &amp; Pakistan
+    </div>
+</div>
+<!-- Key Specification Cards -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-title-md text-title-md text-primary pt-space-xs">Key License Benefits</span>
+<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low shadow-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center flex-shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[20px]">all_inclusive</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-primary">Lifetime Validity - 1 PC Activation</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Permanent license tied to your motherboard. Reinstall anytime without losing validity.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low shadow-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center flex-shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[20px]">upgrade</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-primary">Clean Install or Upgrade Home</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Seamlessly upgrades from Windows 10/11 Home to Pro without wiping documents or apps.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low shadow-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center flex-shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[20px]">cloud_done</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-primary">Official Online Microsoft Servers</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Activates directly in Settings &gt; System &gt; Activation via legitimate Microsoft KMS/Retail servers.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low shadow-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center flex-shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[20px]">ondemand_video</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-primary">Urdu &amp; English Video Guide Included</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Get a step-by-step 2-minute walkthrough on WhatsApp with instant remote support if needed.</span>
+</div>
+</div>
+</div>
+<!-- How it works (Interactive Accordion) -->
+<div class="rounded-xl bg-surface-container-high p-space-md shadow-md">
+<button aria-expanded="true" class="w-full flex items-center justify-between text-left focus:outline-none" id="toggleHowItWorks">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">quickreply</span>
+<span class="font-title-md text-title-md text-primary">How will I receive my key?</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200" id="accordionIcon">expand_less</span>
+</button>
+<div class="mt-space-md space-y-space-sm" id="howItWorksContent">
+<div class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary font-label-md text-label-md flex items-center justify-center flex-shrink-0">1</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-primary">Quick Mobile Payment</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pay via JazzCash, Easypaisa, SadaPay, or Raast using standard QR or account number.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary font-label-md text-label-md flex items-center justify-center flex-shrink-0">2</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-primary">Instant Delivery on Screen &amp; WhatsApp</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Within 60-180 seconds, your unique 25-digit activation key is displayed and texted.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary font-label-md text-label-md flex items-center justify-center flex-shrink-0">3</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-primary">Paste &amp; Activate</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Go to Settings &gt; Update &gt; Activation. Enter key and click ‘Activate’. All features unlock immediately.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Verified Buyer Highlight from PK -->
+<div class="rounded-xl bg-surface-container-low p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary font-title-md text-title-md">
+          H
+        </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-primary">Hamza Tariq</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Gulberg, Lahore • Verified Purchase</span>
+</div>
+</div>
+<span class="font-label-md text-label-md text-secondary-fixed flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[14px]">verified_user</span>
+        Active Key
+      </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+      “Paid via JazzCash and received key on WhatsApp in literally 2 minutes. Upgraded my Dell laptop from Win 11 Home without any format. Genuine MS activation!”
+    </p>
+</div>
+</div>
+<!-- Sticky Bottom Bar -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest/90 backdrop-blur-xl p-space-md pb-safe shadow-[0_-8px_24px_rgba(0,0,0,0.5)]">
+<div class="max-w-md mx-auto flex items-center gap-space-sm">
+<!-- WhatsApp Outline Inquiry -->
+<a aria-label="Inquire on WhatsApp" class="h-12 px-space-md rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-secondary flex items-center justify-center gap-space-2xs transition-colors flex-shrink-0" href="https://wa.me/?text=Hi%20SoftBazaar,%20I%20want%20to%20inquire%20about%20Windows%2011%20Pro%20Retail%20Key" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span class="font-label-lg text-label-lg">WhatsApp</span>
+</a>
+<!-- Primary Buy Now CTA -->
+<button class="flex-1 h-12 px-space-md rounded-xl bg-gradient-to-r from-primary-container to-secondary-container text-on-primary font-headline-md text-headline-md flex items-center justify-center gap-space-xs shadow-[0_0_20px_rgba(0,242,254,0.3)] active:scale-[0.98] transition-transform" id="buyNowBtn">
+<span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+<span>Buy Now • ₨ 1,850</span>
+</button>
+</div>
+</div>
+<!-- Local micro-interaction script -->
+<script>
+  (function() {
+    const toggleBtn = document.getElementById('toggleHowItWorks');
+    const content = document.getElementById('howItWorksContent');
+    const icon = document.getElementById('accordionIcon');
+    const buyBtn = document.getElementById('buyNowBtn');
+
+    if (toggleBtn && content && icon) {
+      toggleBtn.addEventListener('click', function() {
+        const isHidden = content.classList.contains('hidden');
+        if (isHidden) {
+          content.classList.remove('hidden');
+          icon.textContent = 'expand_less';
+          toggleBtn.setAttribute('aria-expanded', 'true');
+        } else {
+          content.classList.add('hidden');
+          icon.textContent = 'expand_more';
+          toggleBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
+    if (buyBtn) {
+      buyBtn.addEventListener('click', function() {
+        buyBtn.classList.add('scale-95');
+        setTimeout(() => buyBtn.classList.remove('scale-95'), 150);
+        window.location.href = '#checkout-drawer';
+      });
+    }
+  })();
+</script></main></body></html>
+
+<!-- My Keys & Vault - SoftBazaar -->
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary-fixed": "#48fdcd", "tertiary-fixed": "#ffddb8", "surface-bright": "#1c3e3f", "on-tertiary": "#472a00", "inverse-primary": "#00696f", "on-primary-fixed-variant": "#004f53", "surface-dim": "#001717", "on-tertiary-fixed-variant": "#653e00", "secondary-fixed-dim": "#00e0b1", "surface-container": "#002425", "secondary": "#48fdcd", "inverse-surface": "#c5e9ea", "tertiary-container": "#ffd3a1", "primary": "#e0fdff", "inverse-on-surface": "#123536", "surface-container-highest": "#173a3b", "on-primary-container": "#006a70", "on-secondary-fixed": "#002117", "on-tertiary-container": "#875400", "surface-container-low": "#002021", "surface-container-high": "#0a2f30", "on-background": "#c5e9ea", "on-error": "#690005", "primary-container": "#00f2fe", "primary-fixed": "#6ff6ff", "tertiary": "#fff5ee", "surface-tint": "#00dce6", "on-primary": "#00373a", "on-secondary-container": "#005e49", "on-secondary": "#00382a", "secondary-container": "#00e0b1", "error-container": "#93000a", "background": "#001717", "surface-container-lowest": "#001112", "on-tertiary-fixed": "#2a1700", "surface": "#001717", "on-secondary-fixed-variant": "#00513e", "on-surface-variant": "#b9cacb", "on-error-container": "#ffdad6", "outline-variant": "#3a494b", "tertiary-fixed-dim": "#ffb95f", "surface-variant": "#173a3b", "outline": "#849495", "on-primary-fixed": "#002022", "error": "#ffb4ab", "primary-fixed-dim": "#00dce6", "on-surface": "#c5e9ea" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter-mobile": "0.75rem", "space-2xl": "3rem", "margin-desktop": "2.5rem", "space-xs": "0.25rem", "margin-tablet": "1.5rem", "space-md": "1rem", "gutter-desktop": "1.5rem", "space-xl": "2rem", "space-lg": "1.5rem", "space-2xs": "0.125rem", "space-sm": "0.5rem", "gutter": "1rem", "margin": "1rem" }, fontFamily: { "label-md": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-currency": ["Plus Jakarta Sans"], "title-lg": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "badge-sm": ["Plus Jakarta Sans"] }, fontSize: { "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "display-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "800" }], "headline-md": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "700" }], "label-currency": ["18px", { lineHeight: "24px", letterSpacing: "0.02em", fontWeight: "800" }], "title-lg": ["18px", { lineHeight: "24px", fontWeight: "600" }], "display-lg-mobile": ["30px", { lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "800" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "headline-lg-mobile": ["22px", { lineHeight: "30px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "title-md": ["16px", { lineHeight: "22px", fontWeight: "600" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "badge-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "700" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="SoftBazaar Brand Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaTLpew6t2tsKv7UoWeQyw0HU9Hc66HXsVz8gUFDHgvgOBsKyhupIJBKUUltzDaUzfSpIK-yOVd0UNlTVLF0JH460vMe4ET3wUyOOOGUUNEaPEKr5yV0EPTDKtfn3EVFEwYLNHo8_k5ttPUAnugsxdqFjMdOtuomD5KqXJ3PRKHzPZ29dde-3fJv_81enYW1mlSRqq4BdU4KatXQnedHnG4Z-p4f-dcr8E98P8XA"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md font-bold tracking-tight text-primary truncate">SoftBazaar</span><span class="px-space-xs py-space-2xs bg-secondary/10 rounded-full font-badge-sm text-badge-sm text-secondary uppercase">PK</span></div><span class="font-label-md text-label-md text-on-surface-variant truncate">My Keys</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><a aria-label="Search" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" data-path="categories" href="#"><span class="material-symbols-outlined text-[20px]">search</span></a><a aria-label="Instant WhatsApp Support" class="h-11 px-space-sm flex items-center gap-space-xs rounded-full bg-surface-container-high hover:bg-surface-container-highest text-secondary transition-colors" href="https://wa.me/" target="_blank"><span class="material-symbols-outlined text-[18px]">chat</span><span class="hidden xs:inline font-badge-sm text-badge-sm font-bold">Instant</span><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span></a><button aria-label="User Profile" class="w-11 h-11 flex items-center justify-center rounded-full p-space-2xs bg-surface-container-highest/60 hover:bg-surface-container-highest transition-colors"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPUgD5gwm-ZZ5GkcurLybhq0SdKXVn-GEOk_9SmvA_bbjuUqM5ZqWFlOE4j68d16FsK7RIMNKfVTltet06Tmnp_iBLg7s44YRlVXJ_P0ma-hYk2qvKtTRSdQ8uXMk5EJC2IGZ83v9WrDPeqepuBBInMRBuhxMibCito6FzSN3P4Dlo7woXeqzGGNBz1a2JIUAy78RtTVqYHSaBWkiuf4OchKkHcvfQe75AiF4FJg"/></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin pb-space-2xl gap-space-lg">
+<!-- Vault Overview Header Badge & Counter -->
+<div class="flex flex-col gap-space-xs mt-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]" style="font-variation-settings: 'FILL' 1;">shield_lock</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold tracking-tight">My Digital Vault</span>
+</div>
+<div class="flex items-center gap-space-2xs px-space-sm py-space-2xs rounded-full bg-surface-container-high text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed animate-ping"></span>
+<span class="font-badge-sm text-badge-sm font-bold uppercase tracking-wider">3 Synced</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+      All your authentic lifetime licenses, instant activation keys &amp; official downloads in one safe place.
+    </p>
+</div>
+<!-- Interactive Filter Bar -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-space-2xs" id="filter-container">
+<button class="filter-chip px-space-md py-space-xs rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-bold transition-all shadow-sm" onclick="filterKeys('all', this)">
+      All Keys (3)
+    </button>
+<button class="filter-chip px-space-md py-space-xs rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-medium transition-all" onclick="filterKeys('active', this)">
+      Active
+    </button>
+<button class="filter-chip px-space-md py-space-xs rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-medium transition-all flex items-center gap-space-2xs" onclick="filterKeys('help', this)">
+<span class="material-symbols-outlined text-[16px]">support_agent</span>
+      Need Help?
+    </button>
+</div>
+<!-- Card 1: Windows 11 Professional Retail -->
+<div class="vault-card flex flex-col bg-surface-container rounded-xl p-space-md gap-space-md shadow-md" data-category="active">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-highest flex items-center justify-center flex-shrink-0 text-primary-container">
+<span class="material-symbols-outlined text-[26px]">laptop_windows</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h2 class="font-title-md text-title-md text-primary font-bold truncate">Windows 11 Professional</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Retail Key • 1 PC Lifetime</span>
+</div>
+</div>
+<div class="flex items-center gap-space-2xs px-space-xs py-space-2xs rounded-full bg-surface-container-highest text-secondary-fixed flex-shrink-0">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-badge-sm text-badge-sm font-bold">Verified</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[16px] text-outline">calendar_today</span>
+        Yesterday, 8:45 PM
+      </span>
+<span class="text-secondary font-label-md text-label-md font-semibold">Instant Online Bind</span>
+</div>
+<!-- License Key Display Box -->
+<div class="flex flex-col gap-space-2xs bg-surface-container-lowest rounded-lg p-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-badge-sm text-badge-sm text-outline uppercase tracking-wider">Product License Key</span>
+<span class="font-badge-sm text-badge-sm text-secondary-fixed flex items-center gap-space-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          Ready to Activate
+        </span>
+</div>
+<div class="flex items-center justify-between gap-space-xs mt-space-2xs">
+<code class="font-label-currency text-label-currency font-extrabold text-primary tracking-wide select-all break-all" id="key-win11">W269N-WFGWX-YVC9B-4J6C9-T83GX</code>
+<button aria-label="Copy Windows 11 License Key" class="h-9 px-space-sm flex items-center gap-space-2xs rounded-lg bg-primary-container hover:bg-primary-fixed text-on-primary-container font-label-md text-label-md font-bold transition-all active:scale-95 flex-shrink-0" onclick="copyToClipboard('W269N-WFGWX-YVC9B-4J6C9-T83GX', this)">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+<span>Copy</span>
+</button>
+</div>
+</div>
+<!-- Quick Action Resource Links -->
+<div class="grid grid-cols-3 gap-space-xs pt-space-2xs">
+<a class="flex flex-col items-center justify-center p-space-xs rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-colors gap-space-2xs text-center" href="#">
+<span class="material-symbols-outlined text-primary text-[20px]">download</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Official ISO</span>
+</a>
+<a class="flex flex-col items-center justify-center p-space-xs rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-colors gap-space-2xs text-center" href="#">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px]">translate</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">اردو Guide</span>
+</a>
+<a class="flex flex-col items-center justify-center p-space-xs rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-colors gap-space-2xs text-center" href="#">
+<span class="material-symbols-outlined text-secondary text-[20px]">receipt_long</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Invoice PDF</span>
+</a>
+</div>
+</div>
+<!-- Card 2: Internet Download Manager (IDM) -->
+<div class="vault-card flex flex-col bg-surface-container rounded-xl p-space-md gap-space-md shadow-md" data-category="active">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-highest flex items-center justify-center flex-shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[26px]">cloud_download</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h2 class="font-title-md text-title-md text-primary font-bold truncate">IDM Lifetime License</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tonec Official • 1 PC Lifetime</span>
+</div>
+</div>
+<div class="flex items-center gap-space-2xs px-space-xs py-space-2xs rounded-full bg-surface-container-highest text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span class="font-badge-sm text-badge-sm font-bold">Active</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[16px] text-outline">history</span>
+        12 Jan 2025
+      </span>
+<span class="text-secondary-fixed-dim font-label-md text-label-md font-semibold">Global Auto-Update</span>
+</div>
+<!-- License Key Display Box -->
+<div class="flex flex-col gap-space-2xs bg-surface-container-lowest rounded-lg p-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-badge-sm text-badge-sm text-outline uppercase tracking-wider">Registration Serial Key</span>
+<span class="font-badge-sm text-badge-sm text-on-surface-variant">Registered to your email</span>
+</div>
+<div class="flex items-center justify-between gap-space-xs mt-space-2xs">
+<code class="font-label-currency text-label-currency font-extrabold text-primary tracking-wide select-all break-all" id="key-idm">7XZ9P-44LKQ-MM91P-8921B</code>
+<button aria-label="Copy IDM License Key" class="h-9 px-space-sm flex items-center gap-space-2xs rounded-lg bg-primary-container hover:bg-primary-fixed text-on-primary-container font-label-md text-label-md font-bold transition-all active:scale-95 flex-shrink-0" onclick="copyToClipboard('7XZ9P-44LKQ-MM91P-8921B', this)">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+<span>Copy</span>
+</button>
+</div>
+</div>
+<!-- Quick Action Resource Links -->
+<div class="grid grid-cols-2 gap-space-xs pt-space-2xs">
+<a class="flex items-center justify-center gap-space-xs p-space-xs rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-colors text-center" href="#">
+<span class="material-symbols-outlined text-secondary text-[20px]">menu_book</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Setup Guide</span>
+</a>
+<a class="flex items-center justify-center gap-space-xs p-space-xs rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-colors text-center" href="#">
+<span class="material-symbols-outlined text-primary text-[20px]">open_in_new</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Official Site</span>
+</a>
+</div>
+</div>
+<!-- Card 3: NordVPN 2-Year Subscription -->
+<div class="vault-card flex flex-col bg-surface-container rounded-xl p-space-md gap-space-md shadow-md" data-category="active">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-highest flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-[26px]">vpn_lock</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h2 class="font-title-md text-title-md text-primary font-bold truncate">NordVPN Complete</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">2-Year Tier • 6 Devices</span>
+</div>
+</div>
+<div class="flex items-center gap-space-2xs px-space-xs py-space-2xs rounded-full bg-surface-container-highest text-tertiary-fixed-dim flex-shrink-0">
+<span class="material-symbols-outlined text-[14px]">hourglass_top</span>
+<span class="font-badge-sm text-badge-sm font-bold">680 Days Left</span>
+</div>
+</div>
+<!-- Subscription Progress Bar -->
+<div class="flex flex-col gap-space-2xs">
+<div class="flex justify-between font-label-md text-label-md text-on-surface-variant">
+<span>Subscription Health</span>
+<span class="text-secondary font-bold">92% Remaining</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-lowest overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary-container to-secondary-fixed rounded-full" style="width: 92%;"></div>
+</div>
+</div>
+<!-- Activation Code & Login Instructions -->
+<div class="flex flex-col gap-space-2xs bg-surface-container-lowest rounded-lg p-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-badge-sm text-badge-sm text-outline uppercase tracking-wider">Account Activation Code</span>
+<span class="font-badge-sm text-badge-sm text-secondary">Pre-Activated Token</span>
+</div>
+<div class="flex items-center justify-between gap-space-xs mt-space-2xs">
+<code class="font-label-currency text-label-currency font-extrabold text-primary tracking-wide select-all break-all" id="key-nord">NORD-PK24-8841-K9Q2</code>
+<button aria-label="Copy NordVPN Activation Code" class="h-9 px-space-sm flex items-center gap-space-2xs rounded-lg bg-primary-container hover:bg-primary-fixed text-on-primary-container font-label-md text-label-md font-bold transition-all active:scale-95 flex-shrink-0" onclick="copyToClipboard('NORD-PK24-8841-K9Q2', this)">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+<span>Copy</span>
+</button>
+</div>
+</div>
+<!-- Quick Action Resource Links -->
+<div class="grid grid-cols-2 gap-space-xs pt-space-2xs">
+<a class="flex items-center justify-center gap-space-xs p-space-xs rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-colors text-center" href="#">
+<span class="material-symbols-outlined text-primary text-[20px]">account_circle</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Login Details</span>
+</a>
+<a class="flex items-center justify-center gap-space-xs p-space-xs rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-colors text-center" href="#">
+<span class="material-symbols-outlined text-secondary text-[20px]">devices</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Manage Devices</span>
+</a>
+</div>
+</div>
+<!-- Help & Support Callout (Pakistan Dedicated Helpline) -->
+<div class="vault-card flex flex-col bg-surface-container-high rounded-xl p-space-md gap-space-sm shadow-md" data-category="help">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">support</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h3 class="font-title-md text-title-md text-primary font-bold">Facing Activation Hurdles?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Instant Urdu &amp; English remote assistance via WhatsApp</p>
+</div>
+</div>
+<div class="flex items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-2xs text-secondary-fixed font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Avg response ~3 mins</span>
+</div>
+<a class="h-10 px-space-md flex items-center gap-space-xs rounded-lg bg-secondary hover:bg-secondary-fixed text-on-secondary font-label-md text-label-md font-bold transition-all shadow-md active:scale-95" href="https://wa.me/" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>WhatsApp Helpline</span>
+</a>
+</div>
+</div>
+<!-- Toast Notification for Haptic/Visual Feedback -->
+<div class="fixed bottom-24 left-1/2 -translate-x-1/2 z-50 px-space-md py-space-xs rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-bold shadow-lg opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-space-2xs" id="toast">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>License Key copied to clipboard!</span>
+</div>
+</div>
+<script>
+  function copyToClipboard(text, btnElement) {
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text);
+    } else {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed';
+      textarea.style.left = '-9999px';
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+    }
+
+    if (navigator.vibrate) {
+      navigator.vibrate(30);
+    }
+
+    // Button state transformation
+    const originalContent = btnElement.innerHTML;
+    btnElement.innerHTML = '<span class="material-symbols-outlined text-[18px]">done</span><span>Copied</span>';
+    btnElement.classList.add('bg-secondary', 'text-on-secondary');
+
+    // Visual Toast Display
+    const toast = document.getElementById('toast');
+    if (toast) {
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      toast.classList.add('opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0', 'pointer-events-none');
+      }, 2200);
+    }
+
+    setTimeout(() => {
+      btnElement.innerHTML = originalContent;
+      btnElement.classList.remove('bg-secondary', 'text-on-secondary');
+    }, 1800);
+  }
+
+  function filterKeys(type, target) {
+    const chips = document.querySelectorAll('.filter-chip');
+    chips.forEach(chip => {
+      chip.className = 'filter-chip px-space-md py-space-xs rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-medium transition-all flex items-center gap-space-2xs';
+    });
+
+    target.className = 'filter-chip px-space-md py-space-xs rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-bold transition-all shadow-sm flex items-center gap-space-2xs';
+
+    const cards = document.querySelectorAll('.vault-card');
+    cards.forEach(card => {
+      if (type === 'all') {
+        card.style.display = 'flex';
+      } else if (type === 'active') {
+        if (card.getAttribute('data-category') === 'active') {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      } else if (type === 'help') {
+        if (card.getAttribute('data-category') === 'help') {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      }
+    });
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_-4px_20px_rgba(0,0,0,0.4)]" data-active-classes="text-secondary-fixed-dim"><div class="flex justify-around items-center h-20 px-space-sm"><a class="flex flex-col items-center justify-center gap-space-2xs min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="store" href="#"><span class="material-symbols-outlined text-[24px]">storefront</span><span class="font-label-md text-label-md">Store</span></a><a class="flex flex-col items-center justify-center gap-space-2xs min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="categories" href="#"><span class="material-symbols-outlined text-[24px]">grid_view</span><span class="font-label-md text-label-md">Categories</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-space-2xs min-w-[56px] min-h-[44px] transition-colors text-secondary-fixed-dim" data-path="my-keys" href="#"><span class="material-symbols-outlined text-[24px]">key</span><span class="font-label-md text-label-md">My Keys</span></a><a class="flex flex-col items-center justify-center gap-space-2xs min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="admin-inventory" href="#"><span class="material-symbols-outlined text-[24px]">admin_panel_settings</span><span class="font-label-md text-label-md">Admin</span></a></div></nav></body></html>
+
+<!-- Instant Checkout - SoftBazaar -->
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary-fixed": "#48fdcd", "tertiary-fixed": "#ffddb8", "surface-bright": "#1c3e3f", "on-tertiary": "#472a00", "inverse-primary": "#00696f", "on-primary-fixed-variant": "#004f53", "surface-dim": "#001717", "on-tertiary-fixed-variant": "#653e00", "secondary-fixed-dim": "#00e0b1", "surface-container": "#002425", "secondary": "#48fdcd", "inverse-surface": "#c5e9ea", "tertiary-container": "#ffd3a1", "primary": "#e0fdff", "inverse-on-surface": "#123536", "surface-container-highest": "#173a3b", "on-primary-container": "#006a70", "on-secondary-fixed": "#002117", "on-tertiary-container": "#875400", "surface-container-low": "#002021", "surface-container-high": "#0a2f30", "on-background": "#c5e9ea", "on-error": "#690005", "primary-container": "#00f2fe", "primary-fixed": "#6ff6ff", "tertiary": "#fff5ee", "surface-tint": "#00dce6", "on-primary": "#00373a", "on-secondary-container": "#005e49", "on-secondary": "#00382a", "secondary-container": "#00e0b1", "error-container": "#93000a", "background": "#001717", "surface-container-lowest": "#001112", "on-tertiary-fixed": "#2a1700", "surface": "#001717", "on-secondary-fixed-variant": "#00513e", "on-surface-variant": "#b9cacb", "on-error-container": "#ffdad6", "outline-variant": "#3a494b", "tertiary-fixed-dim": "#ffb95f", "surface-variant": "#173a3b", "outline": "#849495", "on-primary-fixed": "#002022", "error": "#ffb4ab", "primary-fixed-dim": "#00dce6", "on-surface": "#c5e9ea" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter-mobile": "0.75rem", "space-2xl": "3rem", "margin-desktop": "2.5rem", "space-xs": "0.25rem", "margin-tablet": "1.5rem", "space-md": "1rem", "gutter-desktop": "1.5rem", "space-xl": "2rem", "space-lg": "1.5rem", "space-2xs": "0.125rem", "space-sm": "0.5rem", "gutter": "1rem", "margin": "1rem" }, fontFamily: { "label-md": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-currency": ["Plus Jakarta Sans"], "title-lg": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "badge-sm": ["Plus Jakarta Sans"] }, fontSize: { "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "display-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "800" }], "headline-md": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "700" }], "label-currency": ["18px", { lineHeight: "24px", letterSpacing: "0.02em", fontWeight: "800" }], "title-lg": ["18px", { lineHeight: "24px", fontWeight: "600" }], "display-lg-mobile": ["30px", { lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "800" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "headline-lg-mobile": ["22px", { lineHeight: "30px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "title-md": ["16px", { lineHeight: "22px", fontWeight: "600" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "badge-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "700" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors flex-shrink-0" onclick="history.back()"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><img alt="SoftBazaar Brand Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaTLpew6t2tsKv7UoWeQyw0HU9Hc66HXsVz8gUFDHgvgOBsKyhupIJBKUUltzDaUzfSpIK-yOVd0UNlTVLF0JH460vMe4ET3wUyOOOGUUNEaPEKr5yV0EPTDKtfn3EVFEwYLNHo8_k5ttPUAnugsxdqFjMdOtuomD5KqXJ3PRKHzPZ29dde-3fJv_81enYW1mlSRqq4BdU4KatXQnedHnG4Z-p4f-dcr8E98P8XA"/><div class="flex flex-col min-w-0"><span class="font-headline-md text-headline-md font-bold text-primary truncate">Instant Checkout</span><span class="font-label-md text-label-md text-on-surface-variant truncate">SoftBazaar Pakistan</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><a aria-label="WhatsApp Support" class="h-11 px-space-sm flex items-center gap-space-xs rounded-full bg-surface-container-high hover:bg-surface-container-highest text-secondary transition-colors" href="https://wa.me/" target="_blank"><span class="material-symbols-outlined text-[18px]">chat</span></a><button aria-label="User Profile" class="w-11 h-11 flex items-center justify-center rounded-full p-space-2xs bg-surface-container-highest/60 hover:bg-surface-container-highest transition-colors"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPUgD5gwm-ZZ5GkcurLybhq0SdKXVn-GEOk_9SmvA_bbjuUqM5ZqWFlOE4j68d16FsK7RIMNKfVTltet06Tmnp_iBLg7s44YRlVXJ_P0ma-hYk2qvKtTRSdQ8uXMk5EJC2IGZ83v9WrDPeqepuBBInMRBuhxMibCito6FzSN3P4Dlo7woXeqzGGNBz1a2JIUAy78RtTVqYHSaBWkiuf4OchKkHcvfQe75AiF4FJg"/></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="px-margin py-space-md flex flex-col gap-space-lg">
+<!-- Delivery Guarantee Banner -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-high p-space-md shadow-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">bolt</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-primary">Instant Automated Dispatch</span>
+<span class="inline-flex items-center px-space-xs py-0.5 rounded-full bg-secondary/15 text-secondary font-badge-sm text-badge-sm">~3 Mins</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Official OEM Key sent straight to WhatsApp &amp; Screen</span>
+</div>
+</div>
+</div>
+<!-- Order Summary Card -->
+<div class="rounded-xl bg-surface-container p-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Order Item</span>
+<span class="inline-flex items-center gap-1 font-badge-sm text-badge-sm text-secondary-fixed bg-secondary-fixed/10 px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">verified</span> Verified Official
+        </span>
+</div>
+<div class="flex items-start gap-space-sm mt-space-2xs">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-container flex-shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[28px]">window</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<h2 class="font-title-lg text-title-lg text-primary truncate">Windows 11 Pro Lifetime Key</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Qty: 1 PC • 32/64 Bit • Global Activation</span>
+</div>
+</div>
+<div class="mt-space-xs pt-space-xs flex items-center justify-between bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Total Payable (All-Inclusive)</span>
+<span class="font-body-sm text-body-sm text-secondary">Zero GST &amp; Processing Fees</span>
+</div>
+<div class="text-right">
+<span class="font-label-currency text-label-currency text-primary-container">₨ 1,850</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through block">₨ 4,500</span>
+</div>
+</div>
+</div>
+<!-- Customer Delivery Info Section -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-primary">Delivery Details</h3>
+<span class="font-body-sm text-body-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">lock</span> Encrypted Transfer
+        </span>
+</div>
+<div class="flex flex-col gap-space-sm bg-surface-container p-space-md rounded-xl shadow-md">
+<!-- Full Name Input -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface" for="full-name">Full Name</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px]">person</span>
+<input class="w-full pl-10 pr-4 py-2.5 rounded-lg bg-surface-container-highest text-primary font-body-md text-body-md placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-1 focus:ring-primary-container transition-all" id="full-name" placeholder="e.g. Hamza Ali" type="text" value="Hamza Ali"/>
+</div>
+</div>
+<!-- WhatsApp Input -->
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface" for="whatsapp-number">WhatsApp Number</label>
+<span class="font-badge-sm text-badge-sm text-secondary-fixed">For Immediate Key Dispatch</span>
+</div>
+<div class="flex items-center rounded-lg bg-surface-container-highest focus-within:ring-1 focus-within:ring-primary-container transition-all overflow-hidden">
+<div class="flex items-center gap-1 px-3 py-2.5 bg-surface-container-high text-primary font-label-md text-label-md select-none">
+<span>🇵🇰</span>
+<span>+92</span>
+</div>
+<input class="w-full px-3 py-2.5 bg-transparent text-primary font-body-md text-body-md placeholder:text-on-surface-variant/60 focus:outline-none" id="whatsapp-number" placeholder="0300 1234567" type="tel" value="0302 8492019"/>
+</div>
+</div>
+<!-- Email (Optional) -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface" for="email-address">Email Address <span class="text-on-surface-variant font-normal">(Optional Backup)</span></label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px]">mail</span>
+<input class="w-full pl-10 pr-4 py-2.5 rounded-lg bg-surface-container-highest text-primary font-body-md text-body-md placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-1 focus:ring-primary-container transition-all" id="email-address" placeholder="hamza.ali@gmail.com" type="email"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Payment Method Selection -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-primary">Payment Channel</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Instant Local Verification</span>
+</div>
+<div class="flex flex-col gap-space-xs" id="payment-options">
+<!-- Easypaisa Option -->
+<label class="payment-card relative flex items-center gap-space-sm p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high transition-all cursor-pointer shadow-sm">
+<input checked="" class="peer sr-only" name="payment_channel" type="radio" value="easypaisa"/>
+<div class="w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center peer-checked:bg-primary-container transition-colors flex-shrink-0">
+<div class="w-2 h-2 rounded-full bg-on-primary"></div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+<span class="font-title-lg text-title-lg font-bold text-secondary">EP</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-primary">Easypaisa</span>
+<span class="font-badge-sm text-badge-sm px-1.5 py-0.5 rounded-full bg-secondary-container/20 text-secondary-container">Popular</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Instant In-App PIN Prompt or Mobile Debit</span>
+</div>
+<span class="material-symbols-outlined text-secondary-fixed text-[20px] ml-auto">flash_on</span>
+</label>
+<!-- JazzCash Option -->
+<label class="payment-card relative flex items-center gap-space-sm p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high transition-all cursor-pointer shadow-sm">
+<input class="peer sr-only" name="payment_channel" type="radio" value="jazzcash"/>
+<div class="w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center peer-checked:bg-primary-container transition-colors flex-shrink-0">
+<div class="w-2 h-2 rounded-full bg-on-primary"></div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+<span class="font-title-lg text-title-lg font-bold text-tertiary-fixed-dim">JC</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-primary">JazzCash</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Automated MPIN Push Request to Wallet</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] ml-auto">account_balance_wallet</span>
+</label>
+<!-- Raast Instant Pay -->
+<label class="payment-card relative flex items-center gap-space-sm p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high transition-all cursor-pointer shadow-sm">
+<input class="peer sr-only" name="payment_channel" type="radio" value="raast"/>
+<div class="w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center peer-checked:bg-primary-container transition-colors flex-shrink-0">
+<div class="w-2 h-2 rounded-full bg-on-primary"></div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[24px] text-primary-fixed">qr_code_2</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-primary">Raast P2P Instant</span>
+<span class="font-badge-sm text-badge-sm px-1.5 py-0.5 rounded-full bg-surface-container-highest text-primary">0% Surcharge</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">State Bank of Pakistan Fast Raast IBAN</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] ml-auto">sync_alt</span>
+</label>
+<!-- SadaPay / NayaPay / Debit Card -->
+<label class="payment-card relative flex items-center gap-space-sm p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high transition-all cursor-pointer shadow-sm">
+<input class="peer sr-only" name="payment_channel" type="radio" value="card"/>
+<div class="w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center peer-checked:bg-primary-container transition-colors flex-shrink-0">
+<div class="w-2 h-2 rounded-full bg-on-primary"></div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[24px] text-secondary">credit_card</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-primary">SadaPay / NayaPay / Cards</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Visa, Mastercard, SadaBiz, PayPak</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] ml-auto">lock</span>
+</label>
+</div>
+</div>
+<!-- Security & Guarantee Trust Module -->
+<div class="rounded-xl bg-surface-container-low p-space-md flex items-start gap-space-sm shadow-sm">
+<div class="w-9 h-9 rounded-full bg-primary-container/15 flex items-center justify-center text-primary-container flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">security</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-primary">100% Activation Guarantee</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Full money-back guarantee or immediate key swap if the Microsoft license fails activation. Live WhatsApp technician standby in Lahore &amp; Karachi.
+        </p>
+</div>
+</div>
+<!-- Sticky / Prominent Action Container -->
+<div class="flex flex-col gap-space-xs mt-space-xs">
+<button class="w-full py-3.5 px-space-md rounded-xl bg-gradient-to-r from-primary-container to-secondary font-headline-md text-headline-md text-on-primary font-bold shadow-lg shadow-primary-container/20 hover:opacity-95 active:scale-[0.99] transition-all flex items-center justify-center gap-space-sm" id="pay-button" type="button">
+<span>Confirm &amp; Pay ₨ 1,850</span>
+<span class="material-symbols-outlined text-[22px]">arrow_forward</span>
+</button>
+<!-- Immediate Next Step Notice -->
+<div class="flex items-center justify-center gap-1.5 py-space-2xs text-center">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+          Key and Microsoft download link appear immediately after checkout.
+        </span>
+</div>
+</div>
+<!-- Official Partner Micro Footer -->
+<div class="flex flex-wrap items-center justify-center gap-space-sm opacity-60 pb-space-lg pt-space-xs">
+<span class="font-badge-sm text-badge-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified_user</span> 256-Bit SSL
+      </span>
+<span class="text-on-surface-variant text-badge-sm">•</span>
+<span class="font-badge-sm text-badge-sm text-on-surface-variant">SBP Raast Integrated</span>
+<span class="text-on-surface-variant text-badge-sm">•</span>
+<span class="font-badge-sm text-badge-sm text-on-surface-variant">Verified SoftBazaar Node</span>
+</div>
+</div>
+</div>
+<script>
+  (function initCheckout() {
+    const cards = document.querySelectorAll('.payment-card');
+    cards.forEach(card => {
+      const radio = card.querySelector('input[type="radio"]');
+      card.addEventListener('click', () => {
+        cards.forEach(c => {
+          c.classList.remove('bg-surface-container-high');
+          c.classList.add('bg-surface-container');
+        });
+        if (radio) {
+          radio.checked = true;
+          card.classList.add('bg-surface-container-high');
+          card.classList.remove('bg-surface-container');
+        }
+      });
+    });
+
+    const payBtn = document.getElementById('pay-button');
+    if (payBtn) {
+      payBtn.addEventListener('click', () => {
+        const phone = document.getElementById('whatsapp-number').value || 'your phone';
+        payBtn.innerHTML = `
+          <span class="material-symbols-outlined animate-spin text-[20px]">sync</span>
+          <span>Initiating Payment Prompt...</span>
+        `;
+        payBtn.disabled = true;
+        setTimeout(() => {
+          payBtn.innerHTML = `
+            <span class="material-symbols-outlined text-[20px]">check</span>
+            <span>Check WhatsApp & Phone Prompt!</span>
+          `;
+          payBtn.classList.remove('from-primary-container', 'to-secondary');
+          payBtn.classList.add('bg-secondary-container', 'text-on-secondary-container');
+        }, 1600);
+      });
+    }
+  })();
+</script></main></body></html>
+
+<!-- Admin - Software Inventory -->
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary-fixed": "#48fdcd", "tertiary-fixed": "#ffddb8", "surface-bright": "#1c3e3f", "on-tertiary": "#472a00", "inverse-primary": "#00696f", "on-primary-fixed-variant": "#004f53", "surface-dim": "#001717", "on-tertiary-fixed-variant": "#653e00", "secondary-fixed-dim": "#00e0b1", "surface-container": "#002425", "secondary": "#48fdcd", "inverse-surface": "#c5e9ea", "tertiary-container": "#ffd3a1", "primary": "#e0fdff", "inverse-on-surface": "#123536", "surface-container-highest": "#173a3b", "on-primary-container": "#006a70", "on-secondary-fixed": "#002117", "on-tertiary-container": "#875400", "surface-container-low": "#002021", "surface-container-high": "#0a2f30", "on-background": "#c5e9ea", "on-error": "#690005", "primary-container": "#00f2fe", "primary-fixed": "#6ff6ff", "tertiary": "#fff5ee", "surface-tint": "#00dce6", "on-primary": "#00373a", "on-secondary-container": "#005e49", "on-secondary": "#00382a", "secondary-container": "#00e0b1", "error-container": "#93000a", "background": "#001717", "surface-container-lowest": "#001112", "on-tertiary-fixed": "#2a1700", "surface": "#001717", "on-secondary-fixed-variant": "#00513e", "on-surface-variant": "#b9cacb", "on-error-container": "#ffdad6", "outline-variant": "#3a494b", "tertiary-fixed-dim": "#ffb95f", "surface-variant": "#173a3b", "outline": "#849495", "on-primary-fixed": "#002022", "error": "#ffb4ab", "primary-fixed-dim": "#00dce6", "on-surface": "#c5e9ea" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter-mobile": "0.75rem", "space-2xl": "3rem", "margin-desktop": "2.5rem", "space-xs": "0.25rem", "margin-tablet": "1.5rem", "space-md": "1rem", "gutter-desktop": "1.5rem", "space-xl": "2rem", "space-lg": "1.5rem", "space-2xs": "0.125rem", "space-sm": "0.5rem", "gutter": "1rem", "margin": "1rem" }, fontFamily: { "label-md": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-currency": ["Plus Jakarta Sans"], "title-lg": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "badge-sm": ["Plus Jakarta Sans"] }, fontSize: { "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "display-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "800" }], "headline-md": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "700" }], "label-currency": ["18px", { lineHeight: "24px", letterSpacing: "0.02em", fontWeight: "800" }], "title-lg": ["18px", { lineHeight: "24px", fontWeight: "600" }], "display-lg-mobile": ["30px", { lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "800" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "headline-lg-mobile": ["22px", { lineHeight: "30px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "title-md": ["16px", { lineHeight: "22px", fontWeight: "600" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "badge-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "700" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="SoftBazaar Brand Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaTLpew6t2tsKv7UoWeQyw0HU9Hc66HXsVz8gUFDHgvgOBsKyhupIJBKUUltzDaUzfSpIK-yOVd0UNlTVLF0JH460vMe4ET3wUyOOOGUUNEaPEKr5yV0EPTDKtfn3EVFEwYLNHo8_k5ttPUAnugsxdqFjMdOtuomD5KqXJ3PRKHzPZ29dde-3fJv_81enYW1mlSRqq4BdU4KatXQnedHnG4Z-p4f-dcr8E98P8XA"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md font-bold tracking-tight text-primary truncate">SoftBazaar</span><span class="px-space-xs py-space-2xs bg-secondary/10 rounded-full font-badge-sm text-badge-sm text-secondary uppercase">PK</span></div><span class="font-label-md text-label-md text-on-surface-variant truncate">Admin Inventory</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><a aria-label="Search" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" data-path="categories" href="#"><span class="material-symbols-outlined text-[20px]">search</span></a><a aria-label="Instant WhatsApp Support" class="h-11 px-space-sm flex items-center gap-space-xs rounded-full bg-surface-container-high hover:bg-surface-container-highest text-secondary transition-colors" href="https://wa.me/" target="_blank"><span class="material-symbols-outlined text-[18px]">chat</span><span class="hidden xs:inline font-badge-sm text-badge-sm font-bold">Instant</span><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span></a><button aria-label="User Profile" class="w-11 h-11 flex items-center justify-center rounded-full p-space-2xs bg-surface-container-highest/60 hover:bg-surface-container-highest transition-colors"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPUgD5gwm-ZZ5GkcurLybhq0SdKXVn-GEOk_9SmvA_bbjuUqM5ZqWFlOE4j68d16FsK7RIMNKfVTltet06Tmnp_iBLg7s44YRlVXJ_P0ma-hYk2qvKtTRSdQ8uXMk5EJC2IGZ83v9WrDPeqepuBBInMRBuhxMibCito6FzSN3P4Dlo7woXeqzGGNBz1a2JIUAy78RtTVqYHSaBWkiuf4OchKkHcvfQe75AiF4FJg"/></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin pb-space-2xl gap-space-lg">
+<!-- Admin Head Banner & Live Pulse -->
+<div class="flex flex-col gap-space-xs pt-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-ping"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary -ml-3"></span>
+<span class="font-label-md text-label-md text-secondary tracking-wide uppercase">Operational Hub</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-space-2xs rounded-full bg-surface-container-high text-on-surface-variant text-label-md font-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">database</span>
+<span>PK Central Node</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold tracking-tight">Admin Console</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live digital inventory, license vault &amp; payout metrics</p>
+</div>
+<!-- Primary Action: + Add Software -->
+<button aria-label="Add New License" class="h-10 px-space-md bg-gradient-to-r from-primary-container to-secondary text-surface-dim font-label-lg text-label-lg rounded-xl flex items-center gap-space-xs shadow-md shadow-primary-container/20 active:scale-95 transition-transform" id="openNewSoftwareModal">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span class="font-bold">Add Keys</span>
+</button>
+</div>
+</div>
+<!-- Key Metrics Row (Asymmetric Bento) -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Today's Revenue (Spans 2 columns) -->
+<div class="col-span-2 p-space-md rounded-2xl bg-surface-container-high shadow-sm flex items-center justify-between relative overflow-hidden">
+<div class="flex flex-col gap-space-2xs z-10">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-secondary">payments</span>
+<span class="font-label-md text-label-md">Today's Total Sales</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg-mobile text-display-lg-mobile text-primary font-extrabold">₨ 48,500</span>
+<span class="font-label-md text-label-md text-secondary font-semibold">+18.4%</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span>26 instant checkout orders</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="text-secondary font-medium">92% via Raast/SadaPay</span>
+</div>
+</div>
+<!-- Decorative Micro Graph -->
+<div class="flex items-end gap-1 h-12 w-20 z-10">
+<div class="w-3 bg-surface-container rounded-t h-4"></div>
+<div class="w-3 bg-surface-container rounded-t h-7"></div>
+<div class="w-3 bg-secondary-container/40 rounded-t h-6"></div>
+<div class="w-3 bg-secondary-container/60 rounded-t h-9"></div>
+<div class="w-3 bg-secondary rounded-t h-12"></div>
+</div>
+<div class="absolute -right-6 -bottom-6 w-28 h-28 rounded-full bg-secondary/5 blur-xl pointer-events-none"></div>
+</div>
+<!-- Active Products Card -->
+<div class="p-space-md rounded-2xl bg-surface-container flex flex-col justify-between gap-space-sm shadow-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-md text-label-md">Active SKUs</span>
+<span class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+</span>
+</div>
+<div>
+<div class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold">24</div>
+<span class="font-body-sm text-body-sm text-secondary font-semibold">100% Listed</span>
+</div>
+</div>
+<!-- Available Keys Card -->
+<div class="p-space-md rounded-2xl bg-surface-container flex flex-col justify-between gap-space-sm shadow-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-md text-label-md">Vault Pool</span>
+<span class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">key</span>
+</span>
+</div>
+<div>
+<div class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold">418</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Unsold licenses</span>
+</div>
+</div>
+</div>
+<!-- Search & Smart Filter Controls -->
+<div class="flex flex-col gap-space-sm">
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-space-md flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full h-12 pl-11 pr-space-md rounded-xl bg-surface-container-high text-on-surface placeholder:text-on-surface-variant/60 font-body-md text-body-md focus:outline-none focus:bg-surface-container-highest transition-colors" id="adminSearchInput" placeholder="Search SKU, license key, or product..." type="text"/>
+<button aria-label="Clear Filter" class="absolute inset-y-0 right-0 pr-space-sm flex items-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+<!-- Filter Pill Chips -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-space-2xs no-scrollbar">
+<button class="px-space-md py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-bold whitespace-nowrap shadow-sm">
+        All (24)
+      </button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-high text-error font-label-md text-label-md flex items-center gap-space-2xs whitespace-nowrap hover:bg-surface-container-highest transition-colors">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+        Low Stock (&lt; 5)
+      </button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md whitespace-nowrap hover:text-on-surface hover:bg-surface-container-highest transition-colors">
+        Operating Systems
+      </button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md whitespace-nowrap hover:text-on-surface hover:bg-surface-container-highest transition-colors">
+        Security &amp; Antivirus
+      </button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md whitespace-nowrap hover:text-on-surface hover:bg-surface-container-highest transition-colors">
+        VPN Tools
+      </button>
+</div>
+</div>
+<!-- Inventory Listing Header -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-primary font-bold">Catalog &amp; Keys Vault</span>
+<span class="px-space-xs py-space-2xs rounded-full bg-surface-container-highest text-on-surface-variant font-badge-sm text-badge-sm">Sorted by Stock</span>
+</div>
+<button class="text-secondary font-label-md text-label-md flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Export CSV</span>
+</button>
+</div>
+<!-- INVENTORY LIST ITEMS -->
+<div class="flex flex-col gap-space-md" id="inventoryItemsContainer">
+<!-- Item 1: Windows 11 Pro Lifetime (Healthy) -->
+<div class="p-space-md rounded-2xl bg-surface-container-high shadow-md flex flex-col gap-space-md relative overflow-hidden transition-all duration-200">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center flex-shrink-0 text-primary-fixed">
+<span class="material-symbols-outlined text-[28px]">window</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<h2 class="font-title-md text-title-md text-primary font-bold truncate">Windows 11 Pro Lifetime</h2>
+<span class="w-2 h-2 rounded-full bg-secondary" title="Active"></span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="font-mono text-label-md font-semibold text-secondary-fixed-dim">SB-WIN11-PRO</span>
+<span>•</span>
+<span>Retail Key</span>
+</div>
+</div>
+</div>
+<!-- Status Badge -->
+<span class="px-space-sm py-1 rounded-full bg-secondary/10 text-secondary font-badge-sm text-badge-sm font-bold flex items-center gap-space-2xs flex-shrink-0">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+          42 Keys Left
+        </span>
+</div>
+<!-- Financial & Stock Velocity Stats -->
+<div class="grid grid-cols-3 gap-space-xs p-space-sm rounded-xl bg-surface-container-lowest/60">
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-body-sm text-body-sm">Selling Price</span>
+<span class="font-label-currency text-label-currency text-primary font-bold">₨ 1,850</span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-body-sm text-body-sm">Total Dispatched</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">184 units</span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-body-sm text-body-sm">Auto-Restock</span>
+<span class="font-title-md text-title-md text-secondary font-semibold">Enabled</span>
+</div>
+</div>
+<!-- Quick Action Controls -->
+<div class="flex items-center justify-between pt-space-2xs">
+<div class="flex items-center gap-space-xs">
+<!-- Add Keys Quick Modal Trigger -->
+<button class="px-space-sm py-2 rounded-xl bg-surface-container-highest hover:bg-surface-bright text-primary font-label-md text-label-md flex items-center gap-space-2xs transition-colors" onclick="triggerKeyInjection('SB-WIN11-PRO')">
+<span class="material-symbols-outlined text-[16px] text-secondary">add</span>
+<span>Add Keys</span>
+</button>
+<!-- Edit Price -->
+<button class="h-9 w-9 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" title="Edit Pricing">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<!-- Delete -->
+<button class="h-9 w-9 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-error transition-colors" title="Archive / Delete">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<!-- Active Toggle Switch -->
+<label class="flex items-center gap-space-xs cursor-pointer select-none">
+<span class="font-label-md text-label-md text-on-surface-variant">Active</span>
+<div class="relative">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-10 h-6 bg-surface-container rounded-full peer peer-checked:bg-secondary-container transition-colors"></div>
+<div class="dot absolute left-1 top-1 bg-on-secondary-container peer-checked:bg-on-secondary w-4 h-4 rounded-full transition-transform peer-checked:translate-x-4"></div>
+</div>
+</label>
+</div>
+</div>
+<!-- Item 2: Kaspersky Total Security 2025 (Low Stock Warning) -->
+<div class="p-space-md rounded-2xl bg-surface-container-high shadow-md flex flex-col gap-space-md relative overflow-hidden">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center flex-shrink-0 text-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-[28px]">shield</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<h2 class="font-title-md text-title-md text-primary font-bold truncate">Kaspersky Total Security 2025</h2>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="font-mono text-label-md font-semibold text-secondary-fixed-dim">SB-KASP-01</span>
+<span>•</span>
+<span>1 Device / 1 Year</span>
+</div>
+</div>
+</div>
+<!-- Warning Badge -->
+<span class="px-space-sm py-1 rounded-full bg-on-tertiary-container/30 text-tertiary-fixed-dim font-badge-sm text-badge-sm font-bold flex items-center gap-space-2xs flex-shrink-0 animate-pulse">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+          3 Keys Left
+        </span>
+</div>
+<!-- Financial & Stock Velocity Stats -->
+<div class="grid grid-cols-3 gap-space-xs p-space-sm rounded-xl bg-surface-container-lowest/60">
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-body-sm text-body-sm">Selling Price</span>
+<span class="font-label-currency text-label-currency text-primary font-bold">₨ 1,600</span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-body-sm text-body-sm">Total Dispatched</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">92 units</span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-body-sm text-body-sm">Restock Status</span>
+<span class="font-title-md text-title-md text-tertiary-fixed-dim font-semibold">Urgent</span>
+</div>
+</div>
+<!-- Quick Action Controls -->
+<div class="flex items-center justify-between pt-space-2xs">
+<div class="flex items-center gap-space-xs">
+<!-- Priority Restock CTA -->
+<button class="px-space-sm py-2 rounded-xl bg-secondary-container hover:bg-secondary-fixed text-on-secondary-container font-label-md text-label-md font-bold flex items-center gap-space-2xs transition-colors shadow-sm" onclick="triggerKeyInjection('SB-KASP-01')">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Restock Keys</span>
+</button>
+<!-- Pause Sales -->
+<button class="px-space-sm py-2 rounded-xl bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-space-2xs transition-colors">
+<span class="material-symbols-outlined text-[16px]">pause_circle</span>
+<span>Pause</span>
+</button>
+<!-- Delete -->
+<button class="h-9 w-9 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-error transition-colors" title="Delete">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<!-- Active Toggle Switch -->
+<label class="flex items-center gap-space-xs cursor-pointer select-none">
+<span class="font-label-md text-label-md text-on-surface-variant">Active</span>
+<div class="relative">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-10 h-6 bg-surface-container rounded-full peer peer-checked:bg-secondary-container transition-colors"></div>
+<div class="dot absolute left-1 top-1 bg-on-secondary-container peer-checked:bg-on-secondary w-4 h-4 rounded-full transition-transform peer-checked:translate-x-4"></div>
+</div>
+</label>
+</div>
+</div>
+<!-- Item 3: NordVPN 2-Year Code (Out of Stock Alert) -->
+<div class="p-space-md rounded-2xl bg-surface-container-high shadow-md flex flex-col gap-space-md relative overflow-hidden opacity-95">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center flex-shrink-0 text-error">
+<span class="material-symbols-outlined text-[28px]">vpn_lock</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<h2 class="font-title-md text-title-md text-on-surface font-bold truncate">NordVPN 2-Year Code</h2>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="font-mono text-label-md font-semibold text-secondary-fixed-dim">SB-NORD-2YR</span>
+<span>•</span>
+<span>Global Activation</span>
+</div>
+</div>
+</div>
+<!-- Out of stock badge -->
+<span class="px-space-sm py-1 rounded-full bg-error-container text-on-error-container font-badge-sm text-badge-sm font-bold flex items-center gap-space-2xs flex-shrink-0">
+<span class="material-symbols-outlined text-[14px]">cancel</span>
+          0 Keys Left
+        </span>
+</div>
+<!-- Financial & Stock Velocity Stats -->
+<div class="grid grid-cols-3 gap-space-xs p-space-sm rounded-xl bg-surface-container-lowest/60">
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-body-sm text-body-sm">Selling Price</span>
+<span class="font-label-currency text-label-currency text-primary font-bold">₨ 3,200</span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-body-sm text-body-sm">Total Dispatched</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">68 units</span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-body-sm text-body-sm">Queue Waiting</span>
+<span class="font-title-md text-title-md text-error font-semibold">14 buyers</span>
+</div>
+</div>
+<!-- Quick Action Controls -->
+<div class="flex items-center justify-between pt-space-2xs">
+<div class="flex items-center gap-space-xs">
+<!-- Upload Batch Keys Button -->
+<button class="px-space-sm py-2 rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md font-bold flex items-center gap-space-2xs transition-transform active:scale-95" onclick="triggerKeyInjection('SB-NORD-2YR')">
+<span class="material-symbols-outlined text-[16px]">upload_file</span>
+<span>Upload Batch</span>
+</button>
+<!-- Switch to Draft -->
+<button class="px-space-sm py-2 rounded-xl bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-space-2xs transition-colors">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+<span>Draft</span>
+</button>
+<!-- Delete -->
+<button class="h-9 w-9 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-error transition-colors" title="Delete">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<!-- Inactive/Paused Toggle Switch -->
+<label class="flex items-center gap-space-xs cursor-pointer select-none">
+<span class="font-label-md text-label-md text-on-surface-variant">Active</span>
+<div class="relative">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-10 h-6 bg-surface-container rounded-full peer peer-checked:bg-secondary-container transition-colors"></div>
+<div class="dot absolute left-1 top-1 bg-on-surface-variant peer-checked:bg-on-secondary w-4 h-4 rounded-full transition-transform peer-checked:translate-x-4"></div>
+</div>
+</label>
+</div>
+</div>
+</div>
+<!-- Batch License Key Injector Modal / Slide Sheet (Hidden by Default) -->
+<div class="fixed inset-0 z-50 bg-surface-dim/80 backdrop-blur-md flex flex-col justify-end transition-opacity duration-300 opacity-0 pointer-events-none" id="licenseBatchSheet">
+<div class="w-full bg-surface-container-high rounded-t-3xl p-space-lg flex flex-col gap-space-md shadow-2xl max-h-[751px] overflow-y-auto">
+<div class="w-12 h-1.5 rounded-full bg-outline-variant mx-auto"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">vpn_key</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-primary font-bold">Inject License Keys</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-mono" id="targetSkuLabel">SKU: SB-WIN11-PRO</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" id="closeBatchSheet">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface">Paste Raw Product Keys (One per line)</label>
+<textarea class="w-full p-space-sm rounded-xl bg-surface-container-lowest font-mono text-body-sm text-secondary-fixed-dim placeholder:text-on-surface-variant/40 focus:outline-none" id="rawKeyInput" placeholder="XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+YYYYY-YYYYY-YYYYY-YYYYY-YYYYY" rows="5"></textarea>
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant">
+<span>Supported: Retail, MAK, KMS Codes</span>
+<span class="text-secondary font-bold" id="detectedKeysCount">0 detected</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<button class="flex-1 h-12 bg-gradient-to-r from-primary-container to-secondary text-surface-dim font-label-lg text-label-lg font-bold rounded-xl flex items-center justify-center gap-space-xs shadow-lg active:scale-98 transition-transform" id="confirmInjectBtn">
+<span class="material-symbols-outlined text-[20px]">cloud_upload</span>
+<span>Encrypt &amp; Add to Vault</span>
+</button>
+</div>
+</div>
+</div>
+<!-- WhatsApp Automated Delivery Health Widget -->
+<div class="p-space-md rounded-2xl bg-surface-container flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">cell_tower</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Auto WhatsApp Bot</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">0.8s dispatch average • 100% gateway uptime</span>
+</div>
+</div>
+<button class="px-space-sm py-1.5 rounded-full bg-surface-container-highest text-secondary font-label-md text-label-md flex-shrink-0" onclick="alert('WhatsApp Bot gateway pinged: Latency 42ms')">
+      Test Bot
+    </button>
+</div>
+</div>
+<!-- Micro-Interactions Script -->
+<script>
+  (function initAdminInteractions() {
+    const sheet = document.getElementById('licenseBatchSheet');
+    const closeBtn = document.getElementById('closeBatchSheet');
+    const rawInput = document.getElementById('rawKeyInput');
+    const countDisplay = document.getElementById('detectedKeysCount');
+    const targetLabel = document.getElementById('targetSkuLabel');
+    const confirmBtn = document.getElementById('confirmInjectBtn');
+
+    window.triggerKeyInjection = function(sku) {
+      if (targetLabel) targetLabel.textContent = 'SKU: ' + sku;
+      if (rawInput) rawInput.value = '';
+      if (countDisplay) countDisplay.textContent = '0 detected';
+      sheet.classList.remove('opacity-0', 'pointer-events-none');
+      sheet.classList.add('opacity-100', 'pointer-events-auto');
+    };
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function() {
+        sheet.classList.add('opacity-0', 'pointer-events-none');
+        sheet.classList.remove('opacity-100', 'pointer-events-auto');
+      });
+    }
+
+    if (rawInput) {
+      rawInput.addEventListener('input', function(e) {
+        const lines = e.target.value.split('\n').filter(line => line.trim().length > 5);
+        if (countDisplay) {
+          countDisplay.textContent = lines.length + ' detected';
+        }
+      });
+    }
+
+    if (confirmBtn) {
+      confirmBtn.addEventListener('click', function() {
+        confirmBtn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">sync</span><span>Syncing Vault...</span>';
+        setTimeout(() => {
+          confirmBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check</span><span>Vault Updated!</span>';
+          setTimeout(() => {
+            sheet.classList.add('opacity-0', 'pointer-events-none');
+            sheet.classList.remove('opacity-100', 'pointer-events-auto');
+            confirmBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">cloud_upload</span><span>Encrypt &amp; Add to Vault</span>';
+          }, 800);
+        }, 1000);
+      });
+    }
+
+    // Modal trigger for top Add button
+    const openNewBtn = document.getElementById('openNewSoftwareModal');
+    if (openNewBtn) {
+      openNewBtn.addEventListener('click', function() {
+        window.triggerKeyInjection('SB-NEW-CATALOG-SKU');
+      });
+    }
+
+    // Search filter micro-behavior
+    const searchInput = document.getElementById('adminSearchInput');
+    const items = document.querySelectorAll('#inventoryItemsContainer > div');
+    if (searchInput) {
+      searchInput.addEventListener('input', function(e) {
+        const query = e.target.value.toLowerCase();
+        items.forEach(item => {
+          const text = item.innerText.toLowerCase();
+          item.style.display = text.includes(query) ? 'flex' : 'none';
+        });
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_-4px_20px_rgba(0,0,0,0.4)]" data-active-classes="text-secondary-fixed-dim"><div class="flex justify-around items-center h-20 px-space-sm"><a class="flex flex-col items-center justify-center gap-space-2xs min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="store" href="#"><span class="material-symbols-outlined text-[24px]">storefront</span><span class="font-label-md text-label-md">Store</span></a><a class="flex flex-col items-center justify-center gap-space-2xs min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="categories" href="#"><span class="material-symbols-outlined text-[24px]">grid_view</span><span class="font-label-md text-label-md">Categories</span></a><a class="flex flex-col items-center justify-center gap-space-2xs min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="my-keys" href="#"><span class="material-symbols-outlined text-[24px]">key</span><span class="font-label-md text-label-md">My Keys</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-space-2xs min-w-[56px] min-h-[44px] transition-colors text-secondary-fixed-dim" data-path="admin-inventory" href="#"><span class="material-symbols-outlined text-[24px]">admin_panel_settings</span><span class="font-label-md text-label-md">Admin</span></a></div></nav></body></html>
+
+<!-- Admin - Add Software & Keys -->
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary-fixed": "#48fdcd", "tertiary-fixed": "#ffddb8", "surface-bright": "#1c3e3f", "on-tertiary": "#472a00", "inverse-primary": "#00696f", "on-primary-fixed-variant": "#004f53", "surface-dim": "#001717", "on-tertiary-fixed-variant": "#653e00", "secondary-fixed-dim": "#00e0b1", "surface-container": "#002425", "secondary": "#48fdcd", "inverse-surface": "#c5e9ea", "tertiary-container": "#ffd3a1", "primary": "#e0fdff", "inverse-on-surface": "#123536", "surface-container-highest": "#173a3b", "on-primary-container": "#006a70", "on-secondary-fixed": "#002117", "on-tertiary-container": "#875400", "surface-container-low": "#002021", "surface-container-high": "#0a2f30", "on-background": "#c5e9ea", "on-error": "#690005", "primary-container": "#00f2fe", "primary-fixed": "#6ff6ff", "tertiary": "#fff5ee", "surface-tint": "#00dce6", "on-primary": "#00373a", "on-secondary-container": "#005e49", "on-secondary": "#00382a", "secondary-container": "#00e0b1", "error-container": "#93000a", "background": "#001717", "surface-container-lowest": "#001112", "on-tertiary-fixed": "#2a1700", "surface": "#001717", "on-secondary-fixed-variant": "#00513e", "on-surface-variant": "#b9cacb", "on-error-container": "#ffdad6", "outline-variant": "#3a494b", "tertiary-fixed-dim": "#ffb95f", "surface-variant": "#173a3b", "outline": "#849495", "on-primary-fixed": "#002022", "error": "#ffb4ab", "primary-fixed-dim": "#00dce6", "on-surface": "#c5e9ea" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter-mobile": "0.75rem", "space-2xl": "3rem", "margin-desktop": "2.5rem", "space-xs": "0.25rem", "margin-tablet": "1.5rem", "space-md": "1rem", "gutter-desktop": "1.5rem", "space-xl": "2rem", "space-lg": "1.5rem", "space-2xs": "0.125rem", "space-sm": "0.5rem", "gutter": "1rem", "margin": "1rem" }, fontFamily: { "label-md": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-currency": ["Plus Jakarta Sans"], "title-lg": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "badge-sm": ["Plus Jakarta Sans"] }, fontSize: { "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "display-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "800" }], "headline-md": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "700" }], "label-currency": ["18px", { lineHeight: "24px", letterSpacing: "0.02em", fontWeight: "800" }], "title-lg": ["18px", { lineHeight: "24px", fontWeight: "600" }], "display-lg-mobile": ["30px", { lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "800" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "headline-lg-mobile": ["22px", { lineHeight: "30px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "title-md": ["16px", { lineHeight: "22px", fontWeight: "600" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "badge-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "700" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="SoftBazaar Brand Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaTLpew6t2tsKv7UoWeQyw0HU9Hc66HXsVz8gUFDHgvgOBsKyhupIJBKUUltzDaUzfSpIK-yOVd0UNlTVLF0JH460vMe4ET3wUyOOOGUUNEaPEKr5yV0EPTDKtfn3EVFEwYLNHo8_k5ttPUAnugsxdqFjMdOtuomD5KqXJ3PRKHzPZ29dde-3fJv_81enYW1mlSRqq4BdU4KatXQnedHnG4Z-p4f-dcr8E98P8XA"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md font-bold tracking-tight text-primary truncate">SoftBazaar</span><span class="px-space-xs py-space-2xs bg-secondary/10 rounded-full font-badge-sm text-badge-sm text-secondary uppercase">PK</span></div><span class="font-label-md text-label-md text-on-surface-variant truncate">Admin Inventory</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><a aria-label="Search" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" data-path="categories" href="#"><span class="material-symbols-outlined text-[20px]">search</span></a><a aria-label="Instant WhatsApp Support" class="h-11 px-space-sm flex items-center gap-space-xs rounded-full bg-surface-container-high hover:bg-surface-container-highest text-secondary transition-colors" href="https://wa.me/" target="_blank"><span class="material-symbols-outlined text-[18px]">chat</span><span class="hidden xs:inline font-badge-sm text-badge-sm font-bold">Instant</span><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span></a><button aria-label="User Profile" class="w-11 h-11 flex items-center justify-center rounded-full p-space-2xs bg-surface-container-highest/60 hover:bg-surface-container-highest transition-colors"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPUgD5gwm-ZZ5GkcurLybhq0SdKXVn-GEOk_9SmvA_bbjuUqM5ZqWFlOE4j68d16FsK7RIMNKfVTltet06Tmnp_iBLg7s44YRlVXJ_P0ma-hYk2qvKtTRSdQ8uXMk5EJC2IGZ83v9WrDPeqepuBBInMRBuhxMibCito6FzSN3P4Dlo7woXeqzGGNBz1a2JIUAy78RtTVqYHSaBWkiuf4OchKkHcvfQe75AiF4FJg"/></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin pb-space-2xl gap-space-lg">
+<!-- Header Banner Section -->
+<div class="flex flex-col gap-space-xs mt-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">add_moderator</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">Add Digital Software</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Create new catalog item, set PKR rates, and inject batch activation keys.</p>
+</div>
+<!-- Status / Progress Metric Card -->
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-high shadow-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">vpn_key_alert</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary">Catalog Sync Active</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Instant WhatsApp dispatch pipeline</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-secondary/10 px-space-sm py-space-2xs rounded-full">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-badge-sm text-badge-sm text-secondary uppercase">Ready</span>
+</div>
+</div>
+<form class="flex flex-col gap-space-xl" id="add-software-form" onsubmit="event.preventDefault();">
+<!-- 1. Basic Details Module -->
+<div class="flex flex-col gap-space-md p-space-lg rounded-xl bg-surface-container shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">edit_document</span>
+<h2 class="font-title-lg text-title-lg text-primary">1. Basic Details</h2>
+</div>
+<span class="font-badge-sm text-badge-sm text-secondary-fixed-dim bg-surface-container-highest px-space-xs py-space-2xs rounded">Required</span>
+</div>
+<!-- Title Input -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface" for="software-title">Software Title</label>
+<div class="relative flex items-center">
+<input class="w-full bg-surface-container-highest text-primary placeholder-on-surface-variant/50 font-body-md text-body-md rounded-lg px-space-md py-space-sm outline-none focus:bg-surface-bright transition-colors" id="software-title" placeholder="e.g. Windows 11 Pro Retail" type="text" value="Microsoft Office 2024 Pro Plus"/>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Customer-facing retail product title.</span>
+</div>
+<!-- Category Selector -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface" for="software-category">Category</label>
+<div class="relative flex items-center">
+<select class="w-full bg-surface-container-highest text-primary font-body-md text-body-md rounded-lg px-space-md py-space-sm outline-none appearance-none focus:bg-surface-bright transition-colors cursor-pointer" id="software-category">
+<option selected="" value="office">Office &amp; Productivity</option>
+<option value="vpn">VPN &amp; Privacy Tools</option>
+<option value="antivirus">Antivirus &amp; Security Suite</option>
+<option value="os">Operating System (Windows / Server)</option>
+<option value="developer">Developer &amp; Cloud Tools</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 pointer-events-none text-on-surface-variant text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Pricing Row in PKR -->
+<div class="grid grid-cols-2 gap-space-md">
+<!-- Selling Price -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface" for="sell-price">Selling Price (PKR)</label>
+<div class="relative flex items-center">
+<span class="absolute left-3 font-label-currency text-label-currency text-secondary select-none">₨</span>
+<input class="w-full bg-surface-container-highest text-primary font-title-lg text-title-lg rounded-lg pl-8 pr-space-sm py-space-sm outline-none focus:bg-surface-bright transition-colors" id="sell-price" placeholder="2,500" type="number" value="2500"/>
+</div>
+<span class="font-badge-sm text-badge-sm text-secondary">Final checkout rate</span>
+</div>
+<!-- Strike / Original Price -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface-variant" for="strike-price">Original Price</label>
+<div class="relative flex items-center">
+<span class="absolute left-3 font-label-currency text-label-currency text-on-surface-variant select-none">₨</span>
+<input class="w-full bg-surface-container-highest text-on-surface-variant font-title-lg text-title-lg rounded-lg pl-8 pr-space-sm py-space-sm outline-none focus:bg-surface-bright transition-colors" id="strike-price" placeholder="4,999" type="number" value="4999"/>
+</div>
+<span class="font-badge-sm text-badge-sm text-on-surface-variant">Strike-through badge</span>
+</div>
+</div>
+</div>
+<!-- 2. Platform & License Type -->
+<div class="flex flex-col gap-space-md p-space-lg rounded-xl bg-surface-container shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">devices</span>
+<h2 class="font-title-lg text-title-lg text-primary">2. Platform &amp; Validity</h2>
+</div>
+<!-- Platforms Selection -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface">Supported Platforms</span>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Windows -->
+<label class="flex items-center gap-space-sm p-space-sm bg-surface-container-highest rounded-lg cursor-pointer hover:bg-surface-bright transition-colors">
+<input checked="" class="w-5 h-5 rounded accent-secondary-fixed bg-surface-container cursor-pointer" type="checkbox"/>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">desktop_windows</span>
+<span class="font-label-md text-label-md text-primary">Windows</span>
+</div>
+</label>
+<!-- macOS -->
+<label class="flex items-center gap-space-sm p-space-sm bg-surface-container-highest rounded-lg cursor-pointer hover:bg-surface-bright transition-colors">
+<input class="w-5 h-5 rounded accent-secondary-fixed bg-surface-container cursor-pointer" type="checkbox"/>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">laptop_mac</span>
+<span class="font-label-md text-label-md text-on-surface">macOS</span>
+</div>
+</label>
+<!-- Android -->
+<label class="flex items-center gap-space-sm p-space-sm bg-surface-container-highest rounded-lg cursor-pointer hover:bg-surface-bright transition-colors">
+<input class="w-5 h-5 rounded accent-secondary-fixed bg-surface-container cursor-pointer" type="checkbox"/>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">smartphone</span>
+<span class="font-label-md text-label-md text-on-surface">Android</span>
+</div>
+</label>
+<!-- iOS -->
+<label class="flex items-center gap-space-sm p-space-sm bg-surface-container-highest rounded-lg cursor-pointer hover:bg-surface-bright transition-colors">
+<input class="w-5 h-5 rounded accent-secondary-fixed bg-surface-container cursor-pointer" type="checkbox"/>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">phone_iphone</span>
+<span class="font-label-md text-label-md text-on-surface">iOS</span>
+</div>
+</label>
+</div>
+</div>
+<!-- License Duration Pill Radios -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<span class="font-label-md text-label-md text-on-surface">License Duration Tier</span>
+<div class="grid grid-cols-3 gap-space-xs bg-surface-container-highest p-space-2xs rounded-lg">
+<label class="flex flex-col items-center justify-center py-space-sm px-space-xs rounded bg-surface-container-high text-secondary shadow-sm cursor-pointer duration-pill" data-tier="lifetime">
+<input checked="" class="hidden" name="license-tier" type="radio" value="lifetime"/>
+<span class="font-label-md text-label-md font-bold">Lifetime</span>
+<span class="font-badge-sm text-badge-sm text-secondary-fixed-dim">Permanent</span>
+</label>
+<label class="flex flex-col items-center justify-center py-space-sm px-space-xs rounded text-on-surface-variant cursor-pointer hover:text-on-surface duration-pill" data-tier="1year">
+<input class="hidden" name="license-tier" type="radio" value="1year"/>
+<span class="font-label-md text-label-md font-bold">1 Year</span>
+<span class="font-badge-sm text-badge-sm opacity-80">365 Days</span>
+</label>
+<label class="flex flex-col items-center justify-center py-space-sm px-space-xs rounded text-on-surface-variant cursor-pointer hover:text-on-surface duration-pill" data-tier="1month">
+<input class="hidden" name="license-tier" type="radio" value="1month"/>
+<span class="font-label-md text-label-md font-bold">1 Month</span>
+<span class="font-badge-sm text-badge-sm opacity-80">Recurring</span>
+</label>
+</div>
+</div>
+</div>
+<!-- 3. Digital License Key Batch Loader -->
+<div class="flex flex-col gap-space-md p-space-lg rounded-xl bg-surface-container shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">inventory_2</span>
+<h2 class="font-title-lg text-title-lg text-primary">3. Batch Key Importer</h2>
+</div>
+<div class="flex items-center gap-space-xs bg-secondary/10 px-space-sm py-space-2xs rounded-full">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span class="font-badge-sm text-badge-sm text-secondary" id="key-count-display">3 keys detected</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface" for="keys-input">Paste Activation Codes / Keys</label>
+<div class="relative">
+<textarea class="w-full bg-surface-container-highest text-primary font-mono text-body-sm rounded-lg p-space-md outline-none focus:bg-surface-bright transition-colors resize-none leading-relaxed" id="keys-input" placeholder="XXXXX-XXXXX-XXXXX-XXXXX
+YYYYY-YYYYY-YYYYY-YYYYY
+ZZZZZ-ZZZZZ-ZZZZZ-ZZZZZ" rows="5">W9X2K-4NM8Q-BRVPT-8K3G1-9PXRT
+7NBT2-H4F8G-Q8P2M-3KD8W-6VTY4
+BK89Q-N2MV8-99TXR-74P8Q-1XCVB</textarea>
+</div>
+<div class="flex items-center justify-between pt-space-2xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">One alphanumeric code per line</span>
+<button class="font-label-md text-label-md text-secondary hover:underline cursor-pointer" id="clear-keys-btn" type="button">Clear Keys</button>
+</div>
+</div>
+<!-- File Upload Alternative Box -->
+<div class="flex items-center justify-between p-space-md rounded-lg bg-surface-container-highest/60 hover:bg-surface-container-highest transition-colors cursor-pointer" id="upload-trigger">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]">upload_file</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary">Or Upload CSV / TXT File</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Automated regex parsing</span>
+</div>
+</div>
+<input accept=".txt,.csv" class="hidden" id="keys-file-input" type="file"/>
+<span class="material-symbols-outlined text-secondary text-[20px]">add_circle</span>
+</div>
+</div>
+<!-- 4. Delivery Automation Settings -->
+<div class="flex flex-col gap-space-md p-space-lg rounded-xl bg-surface-container shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">tune</span>
+<h2 class="font-title-lg text-title-lg text-primary">4. Automation &amp; Alerts</h2>
+</div>
+<!-- Automation Toggle 1 -->
+<label class="flex items-start justify-between gap-space-md p-space-sm rounded-lg bg-surface-container-highest cursor-pointer">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">bolt</span>
+<span class="font-label-md text-label-md text-primary">Instant Auto-Dispatch</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">Release next available key via WhatsApp &amp; Email immediately after payment confirmation.</span>
+</div>
+<div class="relative inline-flex items-center cursor-pointer mt-1 flex-shrink-0">
+<input checked="" class="sr-only peer" id="toggle-dispatch" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container rounded-full peer peer-checked:bg-secondary-container peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-secondary after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</div>
+</label>
+<!-- Automation Toggle 2 -->
+<label class="flex items-start justify-between gap-space-md p-space-sm rounded-lg bg-surface-container-highest cursor-pointer">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[18px]">notifications_active</span>
+<span class="font-label-md text-label-md text-primary">Low Inventory Warning</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">Send push &amp; SMS notification to store administrator when key balance falls below 5.</span>
+</div>
+<div class="relative inline-flex items-center cursor-pointer mt-1 flex-shrink-0">
+<input checked="" class="sr-only peer" id="toggle-alerts" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container rounded-full peer peer-checked:bg-secondary-container peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-secondary after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</div>
+</label>
+</div>
+<!-- Live Preview Floating Card / Trust Guarantee -->
+<div class="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-high/80">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-secondary text-[26px]">verified_user</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-primary truncate">100% Genuine Activation Guarantee</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Keys will be linked to PK payment gateways (Easypaisa, JazzCash, Raast, SadaPay).</span>
+</div>
+</div>
+<!-- Form Action Buttons -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<!-- Primary Action -->
+<button class="w-full flex items-center justify-center gap-space-xs py-space-md px-space-lg rounded-xl bg-gradient-to-r from-primary-container to-secondary font-title-lg text-title-lg font-bold text-on-primary shadow-lg hover:opacity-95 active:scale-[0.99] transition-all cursor-pointer" id="publish-btn" type="button">
+<span class="material-symbols-outlined text-[22px]">publish</span>
+<span>Publish Software to Store</span>
+</button>
+<!-- Secondary & Cancel Actions in Row -->
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="w-full flex items-center justify-center gap-space-xs py-space-sm px-space-md rounded-lg bg-surface-container-high text-on-surface font-label-lg text-label-lg hover:bg-surface-container-highest transition-colors cursor-pointer" id="draft-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Save Draft</span>
+</button>
+<button class="w-full flex items-center justify-center py-space-sm px-space-md rounded-lg bg-surface-container-lowest text-on-surface-variant font-label-lg text-label-lg hover:text-error transition-colors cursor-pointer" id="cancel-btn" type="button">
+<span>Cancel</span>
+</button>
+</div>
+</div>
+</form>
+<!-- Interactive Feedback Drawer / Toast -->
+<div class="fixed bottom-24 left-margin right-margin mx-auto max-w-sm p-space-md rounded-xl bg-surface-container-high text-primary shadow-xl flex items-center justify-between transition-all transform translate-y-24 opacity-0 pointer-events-none z-50" id="toast-notification">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary" id="toast-title">Catalog Updated</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="toast-desc">Item successfully added to inventory.</span>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-primary" id="toast-close" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+</div>
+<script>
+  // Dynamic Key Counter and Input Sanitization
+  const keysTextarea = document.getElementById('keys-input');
+  const keyCountDisplay = document.getElementById('key-count-display');
+  const clearKeysBtn = document.getElementById('clear-keys-btn');
+  const uploadTrigger = document.getElementById('upload-trigger');
+  const keysFileInput = document.getElementById('keys-file-input');
+  const toastNotification = document.getElementById('toast-notification');
+  const toastClose = document.getElementById('toast-close');
+  const publishBtn = document.getElementById('publish-btn');
+  const draftBtn = document.getElementById('draft-btn');
+
+  function updateKeyCount() {
+    if (!keysTextarea || !keyCountDisplay) return;
+    const lines = keysTextarea.value
+      .split('\n')
+      .map(k => k.trim())
+      .filter(k => k.length > 0);
+    const count = lines.length;
+    keyCountDisplay.textContent = count === 1 ? '1 key detected' : count + ' keys detected';
+  }
+
+  if (keysTextarea) {
+    keysTextarea.addEventListener('input', updateKeyCount);
+  }
+
+  if (clearKeysBtn && keysTextarea) {
+    clearKeysBtn.addEventListener('click', () => {
+      keysTextarea.value = '';
+      updateKeyCount();
+    });
+  }
+
+  // Duration Pill selector interaction
+  const durationPills = document.querySelectorAll('.duration-pill');
+  durationPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      durationPills.forEach(p => {
+        p.classList.remove('bg-surface-container-high', 'text-secondary', 'shadow-sm');
+        p.classList.add('text-on-surface-variant');
+      });
+      pill.classList.remove('text-on-surface-variant');
+      pill.classList.add('bg-surface-container-high', 'text-secondary', 'shadow-sm');
+      const radio = pill.querySelector('input[type="radio"]');
+      if (radio) radio.checked = true;
+    });
+  });
+
+  // Simulated File Upload Handling
+  if (uploadTrigger && keysFileInput) {
+    uploadTrigger.addEventListener('click', () => keysFileInput.click());
+    keysFileInput.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const content = event.target.result;
+        keysTextarea.value = content;
+        updateKeyCount();
+        showToast('File Imported', file.name + ' loaded into editor.');
+      };
+      reader.readAsText(file);
+    });
+  }
+
+  // Toast Functionality
+  function showToast(title, msg) {
+    if (!toastNotification) return;
+    document.getElementById('toast-title').textContent = title;
+    document.getElementById('toast-desc').textContent = msg;
+    toastNotification.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+    toastNotification.classList.add('translate-y-0', 'opacity-100');
+
+    setTimeout(() => {
+      hideToast();
+    }, 4000);
+  }
+
+  function hideToast() {
+    if (!toastNotification) return;
+    toastNotification.classList.remove('translate-y-0', 'opacity-100');
+    toastNotification.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+  }
+
+  if (toastClose) {
+    toastClose.addEventListener('click', hideToast);
+  }
+
+  if (publishBtn) {
+    publishBtn.addEventListener('click', () => {
+      showToast('Software Published!', 'Keys active for instant WhatsApp delivery.');
+    });
+  }
+
+  if (draftBtn) {
+    draftBtn.addEventListener('click', () => {
+      showToast('Draft Saved', 'Draft stored in admin repository.');
+    });
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_-4px_20px_rgba(0,0,0,0.4)]" data-active-classes="text-secondary-fixed-dim"><div class="flex justify-around items-center h-20 px-space-sm"><a class="flex flex-col items-center justify-center gap-space-2xs min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="store" href="#"><span class="material-symbols-outlined text-[24px]">storefront</span><span class="font-label-md text-label-md">Store</span></a><a class="flex flex-col items-center justify-center gap-space-2xs min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="categories" href="#"><span class="material-symbols-outlined text-[24px]">grid_view</span><span class="font-label-md text-label-md">Categories</span></a><a class="flex flex-col items-center justify-center gap-space-2xs min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="my-keys" href="#"><span class="material-symbols-outlined text-[24px]">key</span><span class="font-label-md text-label-md">My Keys</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-space-2xs min-w-[56px] min-h-[44px] transition-colors text-secondary-fixed-dim" data-path="admin-inventory" href="#"><span class="material-symbols-outlined text-[24px]">admin_panel_settings</span><span class="font-label-md text-label-md">Admin</span></a></div></nav></body></html>
+
+<!-- Order Success & WhatsApp Dispatch - SoftBazaar -->
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary-fixed": "#48fdcd", "tertiary-fixed": "#ffddb8", "surface-bright": "#1c3e3f", "on-tertiary": "#472a00", "inverse-primary": "#00696f", "on-primary-fixed-variant": "#004f53", "surface-dim": "#001717", "on-tertiary-fixed-variant": "#653e00", "secondary-fixed-dim": "#00e0b1", "surface-container": "#002425", "secondary": "#48fdcd", "inverse-surface": "#c5e9ea", "tertiary-container": "#ffd3a1", "primary": "#e0fdff", "inverse-on-surface": "#123536", "surface-container-highest": "#173a3b", "on-primary-container": "#006a70", "on-secondary-fixed": "#002117", "on-tertiary-container": "#875400", "surface-container-low": "#002021", "surface-container-high": "#0a2f30", "on-background": "#c5e9ea", "on-error": "#690005", "primary-container": "#00f2fe", "primary-fixed": "#6ff6ff", "tertiary": "#fff5ee", "surface-tint": "#00dce6", "on-primary": "#00373a", "on-secondary-container": "#005e49", "on-secondary": "#00382a", "secondary-container": "#00e0b1", "error-container": "#93000a", "background": "#001717", "surface-container-lowest": "#001112", "on-tertiary-fixed": "#2a1700", "surface": "#001717", "on-secondary-fixed-variant": "#00513e", "on-surface-variant": "#b9cacb", "on-error-container": "#ffdad6", "outline-variant": "#3a494b", "tertiary-fixed-dim": "#ffb95f", "surface-variant": "#173a3b", "outline": "#849495", "on-primary-fixed": "#002022", "error": "#ffb4ab", "primary-fixed-dim": "#00dce6", "on-surface": "#c5e9ea" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter-mobile": "0.75rem", "space-2xl": "3rem", "margin-desktop": "2.5rem", "space-xs": "0.25rem", "margin-tablet": "1.5rem", "space-md": "1rem", "gutter-desktop": "1.5rem", "space-xl": "2rem", "space-lg": "1.5rem", "space-2xs": "0.125rem", "space-sm": "0.5rem", "gutter": "1rem", "margin": "1rem" }, fontFamily: { "label-md": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-currency": ["Plus Jakarta Sans"], "title-lg": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "badge-sm": ["Plus Jakarta Sans"] }, fontSize: { "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "display-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "800" }], "headline-md": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "700" }], "label-currency": ["18px", { lineHeight: "24px", letterSpacing: "0.02em", fontWeight: "800" }], "title-lg": ["18px", { lineHeight: "24px", fontWeight: "600" }], "display-lg-mobile": ["30px", { lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "800" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "headline-lg-mobile": ["22px", { lineHeight: "30px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "title-md": ["16px", { lineHeight: "22px", fontWeight: "600" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "badge-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "700" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors flex-shrink-0" onclick="history.back()"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><img alt="SoftBazaar Brand Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaTLpew6t2tsKv7UoWeQyw0HU9Hc66HXsVz8gUFDHgvgOBsKyhupIJBKUUltzDaUzfSpIK-yOVd0UNlTVLF0JH460vMe4ET3wUyOOOGUUNEaPEKr5yV0EPTDKtfn3EVFEwYLNHo8_k5ttPUAnugsxdqFjMdOtuomD5KqXJ3PRKHzPZ29dde-3fJv_81enYW1mlSRqq4BdU4KatXQnedHnG4Z-p4f-dcr8E98P8XA"/><div class="flex flex-col min-w-0"><span class="font-headline-md text-headline-md font-bold text-primary truncate">Instant Checkout</span><span class="font-label-md text-label-md text-on-surface-variant truncate">SoftBazaar Pakistan</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><a aria-label="WhatsApp Support" class="h-11 px-space-sm flex items-center gap-space-xs rounded-full bg-surface-container-high hover:bg-surface-container-highest text-secondary transition-colors" href="https://wa.me/" target="_blank"><span class="material-symbols-outlined text-[18px]">chat</span></a><button aria-label="User Profile" class="w-11 h-11 flex items-center justify-center rounded-full p-space-2xs bg-surface-container-highest/60 hover:bg-surface-container-highest transition-colors"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPUgD5gwm-ZZ5GkcurLybhq0SdKXVn-GEOk_9SmvA_bbjuUqM5ZqWFlOE4j68d16FsK7RIMNKfVTltet06Tmnp_iBLg7s44YRlVXJ_P0ma-hYk2qvKtTRSdQ8uXMk5EJC2IGZ83v9WrDPeqepuBBInMRBuhxMibCito6FzSN3P4Dlo7woXeqzGGNBz1a2JIUAy78RtTVqYHSaBWkiuf4OchKkHcvfQe75AiF4FJg"/></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="px-margin py-space-md flex flex-col gap-space-lg">
+<!-- Delivery Guarantee Banner -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-high p-space-md shadow-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">bolt</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-primary">Instant Automated Dispatch</span>
+<span class="inline-flex items-center px-space-xs py-0.5 rounded-full bg-secondary/15 text-secondary font-badge-sm text-badge-sm">~3 Mins</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Official OEM Key sent straight to WhatsApp &amp; Screen</span>
+</div>
+</div>
+</div>
+<!-- Order Summary Card -->
+<div class="rounded-xl bg-surface-container p-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Order Item</span>
+<span class="inline-flex items-center gap-1 font-badge-sm text-badge-sm text-secondary-fixed bg-secondary-fixed/10 px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">verified</span> Verified Official
+        </span>
+</div>
+<div class="flex items-start gap-space-sm mt-space-2xs">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-container flex-shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[28px]">window</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<h2 class="font-title-lg text-title-lg text-primary truncate">Windows 11 Pro Lifetime Key</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Qty: 1 PC • 32/64 Bit • Global Activation</span>
+</div>
+</div>
+<div class="mt-space-xs pt-space-xs flex items-center justify-between bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Total Payable (All-Inclusive)</span>
+<span class="font-body-sm text-body-sm text-secondary">Zero GST &amp; Processing Fees</span>
+</div>
+<div class="text-right">
+<span class="font-label-currency text-label-currency text-primary-container">₨ 1,850</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through block">₨ 4,500</span>
+</div>
+</div>
+</div>
+<!-- Customer Delivery Info Section -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-primary">Delivery Details</h3>
+<span class="font-body-sm text-body-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">lock</span> Encrypted Transfer
+        </span>
+</div>
+<div class="flex flex-col gap-space-sm bg-surface-container p-space-md rounded-xl shadow-md">
+<!-- Full Name Input -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface" for="full-name">Full Name</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px]">person</span>
+<input class="w-full pl-10 pr-4 py-2.5 rounded-lg bg-surface-container-highest text-primary font-body-md text-body-md placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-1 focus:ring-primary-container transition-all" id="full-name" placeholder="e.g. Hamza Ali" type="text" value="Hamza Ali"/>
+</div>
+</div>
+<!-- WhatsApp Input -->
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface" for="whatsapp-number">WhatsApp Number</label>
+<span class="font-badge-sm text-badge-sm text-secondary-fixed">For Immediate Key Dispatch</span>
+</div>
+<div class="flex items-center rounded-lg bg-surface-container-highest focus-within:ring-1 focus-within:ring-primary-container transition-all overflow-hidden">
+<div class="flex items-center gap-1 px-3 py-2.5 bg-surface-container-high text-primary font-label-md text-label-md select-none">
+<span>🇵🇰</span>
+<span>+92</span>
+</div>
+<input class="w-full px-3 py-2.5 bg-transparent text-primary font-body-md text-body-md placeholder:text-on-surface-variant/60 focus:outline-none" id="whatsapp-number" placeholder="0300 1234567" type="tel" value="0302 8492019"/>
+</div>
+</div>
+<!-- Email (Optional) -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface" for="email-address">Email Address <span class="text-on-surface-variant font-normal">(Optional Backup)</span></label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px]">mail</span>
+<input class="w-full pl-10 pr-4 py-2.5 rounded-lg bg-surface-container-highest text-primary font-body-md text-body-md placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-1 focus:ring-primary-container transition-all" id="email-address" placeholder="hamza.ali@gmail.com" type="email"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Payment Method Selection -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-primary">Payment Channel</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Instant Local Verification</span>
+</div>
+<div class="flex flex-col gap-space-xs" id="payment-options">
+<!-- Easypaisa Option -->
+<label class="payment-card relative flex items-center gap-space-sm p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high transition-all cursor-pointer shadow-sm">
+<input checked="" class="peer sr-only" name="payment_channel" type="radio" value="easypaisa"/>
+<div class="w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center peer-checked:bg-primary-container transition-colors flex-shrink-0">
+<div class="w-2 h-2 rounded-full bg-on-primary"></div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+<span class="font-title-lg text-title-lg font-bold text-secondary">EP</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-primary">Easypaisa</span>
+<span class="font-badge-sm text-badge-sm px-1.5 py-0.5 rounded-full bg-secondary-container/20 text-secondary-container">Popular</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Instant In-App PIN Prompt or Mobile Debit</span>
+</div>
+<span class="material-symbols-outlined text-secondary-fixed text-[20px] ml-auto">flash_on</span>
+</label>
+<!-- JazzCash Option -->
+<label class="payment-card relative flex items-center gap-space-sm p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high transition-all cursor-pointer shadow-sm">
+<input class="peer sr-only" name="payment_channel" type="radio" value="jazzcash"/>
+<div class="w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center peer-checked:bg-primary-container transition-colors flex-shrink-0">
+<div class="w-2 h-2 rounded-full bg-on-primary"></div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+<span class="font-title-lg text-title-lg font-bold text-tertiary-fixed-dim">JC</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-primary">JazzCash</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Automated MPIN Push Request to Wallet</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] ml-auto">account_balance_wallet</span>
+</label>
+<!-- Raast Instant Pay -->
+<label class="payment-card relative flex items-center gap-space-sm p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high transition-all cursor-pointer shadow-sm">
+<input class="peer sr-only" name="payment_channel" type="radio" value="raast"/>
+<div class="w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center peer-checked:bg-primary-container transition-colors flex-shrink-0">
+<div class="w-2 h-2 rounded-full bg-on-primary"></div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[24px] text-primary-fixed">qr_code_2</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-primary">Raast P2P Instant</span>
+<span class="font-badge-sm text-badge-sm px-1.5 py-0.5 rounded-full bg-surface-container-highest text-primary">0% Surcharge</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">State Bank of Pakistan Fast Raast IBAN</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] ml-auto">sync_alt</span>
+</label>
+<!-- SadaPay / NayaPay / Debit Card -->
+<label class="payment-card relative flex items-center gap-space-sm p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high transition-all cursor-pointer shadow-sm">
+<input class="peer sr-only" name="payment_channel" type="radio" value="card"/>
+<div class="w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center peer-checked:bg-primary-container transition-colors flex-shrink-0">
+<div class="w-2 h-2 rounded-full bg-on-primary"></div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[24px] text-secondary">credit_card</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-primary">SadaPay / NayaPay / Cards</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Visa, Mastercard, SadaBiz, PayPak</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] ml-auto">lock</span>
+</label>
+</div>
+</div>
+<!-- Security & Guarantee Trust Module -->
+<div class="rounded-xl bg-surface-container-low p-space-md flex items-start gap-space-sm shadow-sm">
+<div class="w-9 h-9 rounded-full bg-primary-container/15 flex items-center justify-center text-primary-container flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">security</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-primary">100% Activation Guarantee</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Full money-back guarantee or immediate key swap if the Microsoft license fails activation. Live WhatsApp technician standby in Lahore &amp; Karachi.
+        </p>
+</div>
+</div>
+<!-- Sticky / Prominent Action Container -->
+<div class="flex flex-col gap-space-xs mt-space-xs">
+<button class="w-full py-3.5 px-space-md rounded-xl bg-gradient-to-r from-primary-container to-secondary font-headline-md text-headline-md text-on-primary font-bold shadow-lg shadow-primary-container/20 hover:opacity-95 active:scale-[0.99] transition-all flex items-center justify-center gap-space-sm" id="pay-button" type="button">
+<span>Confirm &amp; Pay ₨ 1,850</span>
+<span class="material-symbols-outlined text-[22px]">arrow_forward</span>
+</button>
+<!-- Immediate Next Step Notice -->
+<div class="flex items-center justify-center gap-1.5 py-space-2xs text-center">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+          Key and Microsoft download link appear immediately after checkout.
+        </span>
+</div>
+</div>
+<!-- Official Partner Micro Footer -->
+<div class="flex flex-wrap items-center justify-center gap-space-sm opacity-60 pb-space-lg pt-space-xs">
+<span class="font-badge-sm text-badge-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified_user</span> 256-Bit SSL
+      </span>
+<span class="text-on-surface-variant text-badge-sm">•</span>
+<span class="font-badge-sm text-badge-sm text-on-surface-variant">SBP Raast Integrated</span>
+<span class="text-on-surface-variant text-badge-sm">•</span>
+<span class="font-badge-sm text-badge-sm text-on-surface-variant">Verified SoftBazaar Node</span>
+</div>
+</div>
+</div>
+<script>
+  (function initCheckout() {
+    const cards = document.querySelectorAll('.payment-card');
+    cards.forEach(card => {
+      const radio = card.querySelector('input[type="radio"]');
+      card.addEventListener('click', () => {
+        cards.forEach(c => {
+          c.classList.remove('bg-surface-container-high');
+          c.classList.add('bg-surface-container');
+        });
+        if (radio) {
+          radio.checked = true;
+          card.classList.add('bg-surface-container-high');
+          card.classList.remove('bg-surface-container');
+        }
+      });
+    });
+
+    const payBtn = document.getElementById('pay-button');
+    if (payBtn) {
+      payBtn.addEventListener('click', () => {
+        const phone = document.getElementById('whatsapp-number').value || 'your phone';
+        payBtn.innerHTML = `
+          <span class="material-symbols-outlined animate-spin text-[20px]">sync</span>
+          <span>Initiating Payment Prompt...</span>
+        `;
+        payBtn.disabled = true;
+        setTimeout(() => {
+          payBtn.innerHTML = `
+            <span class="material-symbols-outlined text-[20px]">check</span>
+            <span>Check WhatsApp & Phone Prompt!</span>
+          `;
+          payBtn.classList.remove('from-primary-container', 'to-secondary');
+          payBtn.classList.add('bg-secondary-container', 'text-on-secondary-container');
+        }, 1600);
+      });
+    }
+  })();
+</script></main><div aria-modal="true" class="fixed inset-0 z-50 flex items-center justify-center p-space-md bg-surface-container-lowest/80 backdrop-blur-xl" id="success-modal" role="dialog"><div class="relative w-full max-w-md max-h-[92vh] overflow-y-auto rounded-xl bg-surface-container border border-outline-variant/30 p-space-md shadow-2xl flex flex-col gap-space-md"><button aria-label="Close modal" class="absolute top-3 right-3 w-9 h-9 flex items-center justify-center rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant hover:text-primary transition-colors z-10" onclick="document.getElementById('success-modal').remove()" type="button"><span class="material-symbols-outlined text-[20px]">close</span></button><div class="flex flex-col items-center text-center pt-space-xs gap-space-2xs"><div class="w-16 h-16 rounded-full bg-secondary/15 text-secondary flex items-center justify-center shadow-lg shadow-secondary/20 mb-1"><span class="material-symbols-outlined text-[36px]" style="font-variation-settings: 'FILL' 1;">check_circle</span></div><span class="inline-flex items-center gap-1 font-badge-sm text-badge-sm px-2.5 py-0.5 rounded-full bg-secondary-container/20 text-secondary-container"><span class="material-symbols-outlined text-[13px]">bolt</span> Instant Dispatch Complete</span><h2 class="font-headline-md text-headline-md font-bold text-primary mt-1">Order Confirmed!</h2><p class="font-body-sm text-body-sm text-on-surface-variant">Your genuine Microsoft OEM license has been generated and dispatched.</p></div><div class="rounded-xl bg-surface-container-low p-space-sm border border-secondary/20 flex flex-col gap-space-xs shadow-md"><div class="flex items-center justify-between"><div class="flex items-center gap-1.5"><div class="w-6 h-6 rounded-full bg-secondary/20 flex items-center justify-center text-secondary"><span class="material-symbols-outlined text-[15px]">chat</span></div><span class="font-label-md text-label-md text-primary font-bold">WhatsApp Key Dispatch</span></div><span class="font-badge-sm text-badge-sm text-secondary flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span> Sent ~10s ago</span></div><div class="flex items-center justify-between text-body-sm text-on-surface-variant px-1"><span class="text-[13px]">Recipient: <strong class="text-primary font-semibold">+92 302 8492019</strong></span><span class="font-badge-sm text-badge-sm text-on-surface-variant bg-surface-container-highest px-1.5 py-0.5 rounded">Automated Bot</span></div><div class="relative flex items-center justify-between bg-surface-container-highest/90 p-space-sm rounded-lg border border-outline-variant/40 mt-0.5"><div class="flex flex-col min-w-0 pr-2"><span class="font-badge-sm text-badge-sm text-on-surface-variant uppercase">Product License Key</span><code class="font-bold text-[14px] text-primary-container tracking-wider select-all truncate" id="delivered-license-key">W269N-WFGWX-YVC9B-4J6C9-T83GX</code></div><button class="flex-shrink-0 inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-bright text-primary font-label-md text-label-md transition-colors" onclick="navigator.clipboard.writeText('W269N-WFGWX-YVC9B-4J6C9-T83GX'); const btn=this; btn.innerText='Copied!'; setTimeout(()=&gt;btn.innerHTML='&lt;span class=\'material-symbols-outlined text-[16px]\'&gt;content_copy&lt;/span&gt; Copy', 2000);" type="button"><span class="material-symbols-outlined text-[16px]">content_copy</span> Copy</button></div></div><div class="flex flex-col gap-1.5 bg-surface-container-high/60 p-space-sm rounded-xl text-body-sm"><div class="flex items-center justify-between text-[13px]"><span class="text-on-surface-variant">Order Reference</span><span class="font-bold text-primary font-label-md">#SB-98421</span></div><div class="flex items-center justify-between text-[13px]"><span class="text-on-surface-variant">Product</span><span class="text-primary truncate max-w-[200px]">Windows 11 Pro Lifetime</span></div><div class="flex items-center justify-between text-[13px]"><span class="text-on-surface-variant">Paid Amount</span><span class="text-secondary font-bold font-label-md">₨ 1,850 <span class="font-normal text-on-surface-variant text-[11px]">(via Easypaisa • 0% Fee)</span></span></div></div><div class="flex flex-col gap-space-xs"><a class="w-full py-3 px-space-md rounded-xl bg-gradient-to-r from-primary-container to-secondary text-on-primary font-label-lg text-label-lg font-bold shadow-md shadow-primary-container/20 flex items-center justify-center gap-2 hover:opacity-95 active:scale-[0.99] transition-all" href="https://wa.me/" target="_blank"><span class="material-symbols-outlined text-[20px]">chat</span><span>Open WhatsApp for Setup &amp; ISO</span></a><button class="w-full py-2.5 px-space-md rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-md text-label-md transition-colors text-center" onclick="document.getElementById('success-modal').remove()" type="button">View in My Digital Vault</button></div><div class="flex items-center justify-center gap-1 text-center opacity-70 pb-0.5"><span class="material-symbols-outlined text-secondary text-[14px]">verified</span><span class="font-badge-sm text-badge-sm text-on-surface-variant">Official OEM Certificate Attached in WhatsApp Message</span></div></div></div></body></html>
